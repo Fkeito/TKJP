@@ -18,7 +18,7 @@ public class Sabaiteikuuuu : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom () {
         Debug.Log ("マッチング成功");
         if (PhotonNetwork.IsMasterClient) {
-            _photonView.RPC("CreateCube", RpcTarget.AllBuffered);
+            _photonView.RPC("CreateCube", RpcTarget.AllBufferedViaServer);
             Debug.Log ("Master");
         } else {
             Debug.Log ("Guest");
