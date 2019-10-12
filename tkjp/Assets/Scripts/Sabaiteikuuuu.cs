@@ -25,6 +25,7 @@ public class Sabaiteikuuuu : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
     private void CreateCube()
     {
         var v = new Vector3 (Random.Range (-3f, 3f), Random.Range (-3f, 3f));
