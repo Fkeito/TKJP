@@ -11,9 +11,10 @@ namespace Assets.Feature.Weapon
         {
             StartPos = transform.position;
         }
-        public void OnTriggerEnter(Collider other)
+        public void OnCollisionEnter(Collision collision)
         {
-            other
+            collision
+                .collider
                 .GetComponent<IAttackable>()
                 ?.Attack(new AttackState(damage: Random.Range(0, 10), atai: Random.Range(0, 10)))
                 .CallResult(result => {
