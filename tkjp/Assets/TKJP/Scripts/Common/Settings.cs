@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TKJP
+namespace TKJP.Common
 {
     public class Settings
     {
