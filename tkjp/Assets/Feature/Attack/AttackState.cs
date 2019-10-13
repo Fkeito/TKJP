@@ -6,11 +6,9 @@
     public struct AttackState
     {
         public int Damage { get; }
-        public int RandomNaAtai { get; }
-        public AttackState(int damage, int atai)
+        public AttackState(int damage)
         {
             Damage = damage;
-            RandomNaAtai = atai;
         }
     }
 }

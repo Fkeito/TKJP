@@ -5,7 +5,7 @@ namespace Assets.Feature.Result
     //インターフェースとして抽出してる
     public interface IResult
     {
-        ResultEnum ResultEnum { get; }
+        ResultEnum Result { get; }
     }
 
     //上のインターフェースに対する、拡張メソッドを定義する
@@ -13,18 +13,22 @@ namespace Assets.Feature.Result
     {
         public static bool IsSuucess(this IResult result)
         {
-            return result.ResultEnum == ResultEnum.Success;
+            return result.Result == ResultEnum.Success;
         }
         public static bool IsFailure(this IResult result)
         {
-            return result.ResultEnum == ResultEnum.Failure;
+            return result.Result == ResultEnum.Failure;
+        }
+        public static string ToString(this IResult result)
+        {
+            return result.Result.ToString();
         }
 
         //メソッドチェーンっぽいの作ってみたかったんだよね～
         public static void CallResult(this IResult result, Action<ResultEnum> call)
         {
             if (result == null) return;
-            call(result.ResultEnum);
+            call(result.Result);
         }
     }
 }

@@ -1,12 +1,13 @@
-﻿using Assets.Feature.Result;
+﻿using System;
+using Assets.Feature.Result;
 namespace Assets.Feature.Attack
 {
     public struct AttackResult : IResult
     {
-        public ResultEnum ResultEnum { get; }
+        public ResultEnum Result { get; }
         public AttackResult(ResultEnum result)
         {
-            ResultEnum = result;
+            Result = result;
         }
 
 
