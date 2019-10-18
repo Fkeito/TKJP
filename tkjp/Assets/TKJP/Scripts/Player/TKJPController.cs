@@ -21,7 +21,6 @@ namespace TKJP.Player
         void Start()
         {
             device = Settings.device;
-            Debug.Log(device);
 
             //接続確認用初期設定
             switch (device)
@@ -36,7 +35,6 @@ namespace TKJP.Player
                         hand.SetActive(false);
                     }
                     break;
-
             }
         }
 
