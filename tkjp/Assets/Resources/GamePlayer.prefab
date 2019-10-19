@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 4464261198649464506}
   - component: {fileID: 6551310175109242303}
   - component: {fileID: 4031419743829424553}
-  - component: {fileID: 6279633280476111328}
+  - component: {fileID: 2741157119291966390}
+  - component: {fileID: 4498924080785844525}
   m_Layer: 0
   m_Name: GamePlayer
   m_TagString: Untagged
@@ -112,7 +113,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 6279633280476111328}
+  - {fileID: 4498924080785844525}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -128,7 +129,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246b3b1788edf4008b5b15d243be1b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6279633280476111328
+--- !u!114 &2741157119291966390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869062893996116065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c0d83c51bc846ce81c3c2e6f529355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+--- !u!114 &4498924080785844525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
