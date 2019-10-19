@@ -23,7 +23,19 @@ namespace TKJP.Player
         void Start()
         {
             device = Settings.device;
-            if (Settings.device == Settings.Device.Quest) Destroy(this);
+
+            switch (device)
+            {
+                case Settings.Device.Quest:
+                    Destroy(this);
+                    break;
+                case Settings.Device.Go:
+                    Destroy(this);
+                    break;
+                default:
+                    //this.transform.position = new Vector3(1f, -1f, 1f);
+                    break;
+            }
         }
 
         void Update()
@@ -33,14 +45,14 @@ namespace TKJP.Player
 
         void SetModelPos()
         {
-            if(device != Settings.Device.Go){
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                Physics.Raycast(ray, out hit, reachableDistance);
-                if (hit.distance > 0f) handModel.transform.forward = (hit.point - this.transform.position).normalized;
-                else handModel.transform.localRotation = Quaternion.identity;
-            }
+            if (device != Settings.Device.Go)
             {
+                Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit cameraHit;
+                Physics.Raycast(cameraRay, out cameraHit, reachableDistance);
+                if (cameraHit.distance > 0f) handModel.transform.forward = (cameraHit.point - this.transform.position).normalized;
+                else handModel.transform.localRotation = Quaternion.identity;
+
                 Ray ray = new Ray(this.transform.position, handModel.forward);
                 RaycastHit hit;
 
