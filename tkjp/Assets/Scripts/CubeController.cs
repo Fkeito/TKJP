@@ -22,7 +22,7 @@ public class CubeController : MonoBehaviourPunCallbacks
         {
             float dx = Input.GetAxis("Horizontal");
             float dy = Input.GetAxis("Vertical");
-            transform.Translate(dx, dy, 0f);
+            transform.Translate(dx/2, dy/2, 0f);
         }
     }
 }

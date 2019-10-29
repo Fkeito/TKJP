@@ -30,5 +30,6 @@ public class Sabaiteikuuuu : MonoBehaviourPunCallbacks
     {
         var v = new Vector3 (Random.Range (-3f, 3f), Random.Range (-3f, 3f));
         PhotonNetwork.Instantiate ("GamePlayer", v, Quaternion.identity);
+        PhotonNetwork.Instantiate("GamePlayer1", v - Vector3.right * 2, Quaternion.identity);
     }
 }
