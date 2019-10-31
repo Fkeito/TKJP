@@ -1,15 +1,16 @@
-﻿using TKJP.Feature.Attack;
-using TKJP.Feature.Hp;
-using UniRx.Async;
-namespace TKJP.Player
+﻿namespace TKJP.Player
 {
-    public class DefenceGrabbable : TKJPGrabbable, IAttackable
+    public abstract class DefenceGrabbable : TKJPGrabbable
     {
-        protected HpAgent HpAgent;
-        public virtual async UniTask<AttackResult> Attack(AttackState state)
+        private DefenceAttackable DefenceAttackable;
+        protected void AddAttackable<T>() where T : DefenceAttackable {
+            DefenceAttackable = gameObject.AddComponent<T>();
+        }
+
+        protected void RemoveAttackable()
         {
-            await UniTask.CompletedTask;
-            return AttackResult.Miss();
+            Destroy(DefenceAttackable);
+            DefenceAttackable = null;
         }
     }
 }
