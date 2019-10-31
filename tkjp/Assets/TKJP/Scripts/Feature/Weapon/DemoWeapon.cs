@@ -2,8 +2,9 @@
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using System.Threading;
-using Assets.Feature.Attack;
-namespace Assets.Feature.Weapon
+using Assets.TKJP.Scripts.Feature.Attack;
+
+namespace Assets.TKJP.Scripts.Feature.Weapon
 {
     [RequireComponent(typeof(Rigidbody))]
     public class DemoWeapon : AsyncCollisionTrigger
@@ -30,7 +31,7 @@ namespace Assets.Feature.Weapon
             if (token.IsCancellationRequested) return;
             var collision = await OnCollisionEnterAsync(token);
             var attackable = collision.collider.GetComponent<IAttackable>();
-            if(attackable != null)
+            if (attackable != null)
             {
                 await Attack(attackable);
             }

@@ -1,8 +1,8 @@
 ﻿using UniRx.Async;
-using System.Threading;
 using UnityEngine;
-using Assets.Feature.Result;
-namespace Assets.Feature.Attack
+using Assets.TKJP.Scripts.Feature.Result;
+
+namespace Assets.TKJP.Scripts.Feature.Attack
 {
     [RequireComponent(typeof(Rigidbody))]
     public class DemoAttackable : MonoBehaviour, IAttackable
@@ -11,7 +11,7 @@ namespace Assets.Feature.Attack
         private bool IsTate = false;
         void Awake()
         {
-            IsAttackerClient = Random.Range(1,20) % 2 == 0;
+            IsAttackerClient = Random.Range(1, 20) % 2 == 0;
             Debug.Log((IsAttackerClient ? "攻撃側" : "防御側") + "クライアントになりました。");
         }
         public async UniTask<AttackResult> Attack(AttackState state)

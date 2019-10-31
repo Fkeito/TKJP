@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Assets.Feature.Result
+
+namespace Assets.TKJP.Scripts.Feature.Result
 {
     //全てのResultに共通する部分である、ResultEnumを持つ、という要素を
     //インターフェースとして抽出してる

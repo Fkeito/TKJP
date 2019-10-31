@@ -1,6 +1,6 @@
-﻿using System;
-using Assets.Feature.Result;
-namespace Assets.Feature.Attack
+﻿using Assets.TKJP.Scripts.Feature.Result;
+
+namespace Assets.TKJP.Scripts.Feature.Attack
 {
     public struct AttackResult : IResult
     {
