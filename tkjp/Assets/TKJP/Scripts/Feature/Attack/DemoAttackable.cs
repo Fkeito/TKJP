@@ -1,8 +1,7 @@
 ﻿using UniRx.Async;
-using System.Threading;
 using UnityEngine;
-using Assets.Feature.Result;
-namespace Assets.Feature.Attack
+using TKJP.Feature.Result;
+namespace TKJP.Feature.Attack
 {
     [RequireComponent(typeof(Rigidbody))]
     public class DemoAttackable : MonoBehaviour, IAttackable

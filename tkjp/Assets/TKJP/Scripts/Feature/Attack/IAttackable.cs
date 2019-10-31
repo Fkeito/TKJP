@@ -1,6 +1,5 @@
 ﻿using UniRx.Async;
-using System.Threading;
-namespace Assets.Feature.Attack
+namespace TKJP.Feature.Attack
 {
     public interface IAttackable
     {
