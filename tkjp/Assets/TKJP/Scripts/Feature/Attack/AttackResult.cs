@@ -1,6 +1,5 @@
-﻿using System;
-using Assets.Feature.Result;
-namespace Assets.Feature.Attack
+﻿using TKJP.Feature.Result;
+namespace TKJP.Feature.Attack
 {
     public struct AttackResult : IResult
     {

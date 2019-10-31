@@ -1,4 +1,4 @@
-﻿namespace Assets.Feature.Attack
+﻿namespace TKJP.Feature.Attack
 {
     //AttackStateの中身が増えたら、ここでゲッターのみ増やせば
     //コンストラクタにも追加しないとコンパイルエラーになるし

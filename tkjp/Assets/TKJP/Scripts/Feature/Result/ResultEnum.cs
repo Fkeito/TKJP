@@ -1,4 +1,4 @@
-﻿namespace Assets.Feature.Result
+﻿namespace TKJP.Feature.Result
 {
     public enum ResultEnum
     {

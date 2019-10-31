@@ -2,8 +2,8 @@
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using System.Threading;
-using Assets.Feature.Attack;
-namespace Assets.Feature.Weapon
+using TKJP.Feature.Attack;
+namespace TKJP.Feature.Weapon
 {
     [RequireComponent(typeof(Rigidbody))]
     public class DemoWeapon : AsyncCollisionTrigger
