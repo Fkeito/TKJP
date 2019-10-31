@@ -7,7 +7,7 @@ namespace TKJP.Player
     public class TKJPGrabber : OVRGrabber
     {
         [System.Serializable]
-        public enum GrabType { None, Attack, Diffence, All };//None:なんもつかめへん, Attack:武器だけ, Diffence:防具だけ, All:全部掴めるやで
+        public enum GrabType { None, Attack, Defence, All };//None:なんもつかめへん, Attack:武器だけ, Diffence:防具だけ, All:全部掴めるやで
         [SerializeField]
         private GrabType grabType = GrabType.None;
 
@@ -62,8 +62,8 @@ namespace TKJP.Player
                 case GrabType.Attack:
                     Grab<AttackGrabbable>();
                     break;
-                case GrabType.Diffence:
-                    Grab<DifferenceGrabbable>();
+                case GrabType.Defence:
+                    Grab<DefenceGrabbable>();
                     break;
                 case GrabType.All:
                     Grab<TKJPGrabbable>();
