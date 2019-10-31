@@ -10,7 +10,7 @@ namespace TKJP.Player
     {
         //Containerを使って自分を初期化する
         protected HpAgent HpAgent;
-        void Awake()
+        void Start()
         {
             Init();
         }
