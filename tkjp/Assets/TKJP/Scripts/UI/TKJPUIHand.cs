@@ -11,8 +11,9 @@ namespace TKJP.UI
         public float grabBegin = 0.55f;
         public float grabEnd = 0.35f;
         private float prevFlex;
-        private bool isGrab;
-        private bool prevGrab;
+
+        private ITKJPTouch touch;
+        private ITKJPGrab grab;
 
         public TKJPController.HandType handType;
 
@@ -25,43 +26,33 @@ namespace TKJP.UI
 
         void OnTriggerEnter(Collider other)
         {
-            ITKJPTouch touch = other.GetComponent<ITKJPTouch>();
+            touch = other.GetComponent<ITKJPTouch>();
             touch?.OnTouchBegin();
+            grab = other.GetComponent<ITKJPGrab>();
             //Todo: HandModel透明化
         }
         void OnTriggerStay(Collider other)
         {
-            ITKJPTouch touch = other.GetComponent<ITKJPTouch>();
             touch?.OnTouch();
-
-            ITKJPGrab grab = other.GetComponent<ITKJPGrab>();
-            if (prevGrab != isGrab)
-            {
-                if (isGrab) grab?.OnGrabBegin();
-                else grab?.OnGrabEnd();
-            }
-            if (isGrab)
-            {
-                grab?.OnGrab();
-            }
         }
         private void OnTriggerExit(Collider other)
         {
-            ITKJPTouch touch = other.GetComponent<ITKJPTouch>();
             touch?.OnTouchEnd();
-            isGrab = false;
+            touch = null;
+            grab = null;
             //HandModel透明化解除
         }
 
         protected void CheckForGrabOrRelease(float prev)
         {
-            if ((prevFlex >= grabBegin) && (prev < grabBegin))
+            if ((prevFlex >= grabBegin))
             {
-                isGrab = true;
+                if (prev < grabBegin) grab?.OnGrabBegin();
+                grab?.OnGrab();
             }
             else if ((prevFlex <= grabEnd) && (prev > grabEnd))
             {
-                isGrab = false;
+                grab?.OnGrabEnd();
             }
         }
     }
