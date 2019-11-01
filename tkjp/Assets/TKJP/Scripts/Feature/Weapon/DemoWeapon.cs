@@ -10,6 +10,7 @@ namespace TKJP.Feature.Weapon
     {
         private Vector3 StartPos;
         private CancellationTokenSource TokenSource;
+        public int Damage = 10;
         private void Awake()
         {
             StartPos = transform.position;
@@ -40,7 +41,7 @@ namespace TKJP.Feature.Weapon
 
         async UniTask Attack(IAttackable attackable)
         {
-            var result = await attackable.Attack(new AttackState(damage: Random.Range(0, 10)));
+            var result = await attackable.Attack(new AttackState(Damage));
             Debug.Log("この攻撃は" + result.Result);
         }
 

@@ -1,11 +1,12 @@
-﻿namespace TKJP.Feature.Hp
+﻿using System;
+namespace TKJP.Feature.Hp
 {
     public interface IHpHolder:IReadOnlyHpHolder
     {
-        new int Hp { get;  set; }
+        int Hp { get;  set; }
     }
     public interface IReadOnlyHpHolder
     {
-        int Hp { get; }
+        IObservable<int> OnChangeHp { get; }
     }
 }
