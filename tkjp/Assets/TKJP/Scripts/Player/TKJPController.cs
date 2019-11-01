@@ -12,7 +12,7 @@ namespace TKJP.Player
         public GameObject hand;
         [SerializeField]
         private HandType handType;
-        [System.Serializable] private enum HandType { Left, Right, }
+        [System.Serializable] public enum HandType { Left, Right, }
 
         private OVRInput.Controller controller = OVRInput.Controller.None;
         private Settings.Device device = Settings.Device.None;
