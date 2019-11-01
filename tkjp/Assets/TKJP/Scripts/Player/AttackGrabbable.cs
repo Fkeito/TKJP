@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace TKJP.Player
+﻿namespace TKJP.Player
 {
-    public class AttackGrabbable : TKJPGrabbable
+    public abstract class AttackGrabbable : TKJPGrabbable
     {
-
+        protected T AddAttacker<T>() where T : Attacker
+        {
+            return AddComponent<T>();
+        }
     }
 }

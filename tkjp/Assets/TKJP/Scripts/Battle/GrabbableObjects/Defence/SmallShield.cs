@@ -8,12 +8,12 @@ namespace TKJP.Battle.GrabbableObjects.Defence
         public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
         {
             base.GrabBegin(hand, grabPoint);
-            AddAttackable<ShieldAttackable>();
+            AddComponent<ShieldAttackable>();
         }
         public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
         {
             base.GrabEnd(linearVelocity, angularVelocity);
-            RemoveAttackable();
+            RemoveComponent<ShieldAttackable>();
         }
     }
 }
