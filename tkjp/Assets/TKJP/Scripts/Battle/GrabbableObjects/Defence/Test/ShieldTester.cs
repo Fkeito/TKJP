@@ -7,13 +7,15 @@ using System;
 
 namespace TKJP.Battle.GrabbableObjects.Defence.Test
 {
-    public class HelmetTester : MonoBehaviour,IHpHolder
+    public class ShieldTester : MonoBehaviour, IHpHolder
     {
-        
-        public GameObject HelmetPrefab;
 
-        public int Hp {
-            get {
+        public GameObject ShieldPrefab;
+
+        public int Hp
+        {
+            get
+            {
                 return _hp;
             }
             set
@@ -32,14 +34,11 @@ namespace TKJP.Battle.GrabbableObjects.Defence.Test
 
         void Start()
         {
-            //このバインド作業をプレイヤーが自分でやる
             SceneContainer.Instance.Bind(new HpAgent(this));
-
-            //これ以降に初期化されたDefenceAttackableはコンテナから値をとってくるのでこれが入る
-
-            var helmet = Instantiate(HelmetPrefab,Vector3.up * 0.5f,Quaternion.identity).GetComponent<Helmet>();
-            helmet.PutOn();
-
+            var shield = Instantiate(ShieldPrefab, Vector3.up * 0.5f, Quaternion.identity).GetComponent<BigShield>();
+            //shield.GrabBegin(,);ここにテスト用の値を入れたかったけど無理、ざんねん
+            //掴まれてないので、アタッカブルがアタッチされず、アタックが呼ばれない
+            //ちゃんと掴まれるとシールドにシールドアタッカブルがアタッチされ、Failを返すようになるはず
             OnChangeHp.Subscribe(hp => Text.text = "HP:" + hp);
         }
     }
