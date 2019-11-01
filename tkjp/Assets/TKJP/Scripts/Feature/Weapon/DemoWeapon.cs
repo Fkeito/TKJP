@@ -8,6 +8,10 @@ namespace TKJP.Feature.Weapon
     [RequireComponent(typeof(Rigidbody))]
     public class DemoWeapon : AsyncCollisionTrigger
     {
+
+        //こいつはasync/awaitの練習のために書いたやつで、ゲームの設計とかに全く関連しない
+        //読む価値無し
+        //でも防具をエディタだけでテストするときには便利だった
         private Vector3 StartPos;
         private CancellationTokenSource TokenSource;
         public int Damage = 10;
@@ -20,10 +24,13 @@ namespace TKJP.Feature.Weapon
             TokenSource = new CancellationTokenSource();
             CollisionLoop(TokenSource.Token);
         }
+        private void OnDisable()
+        {
+            Debug.Log("停止時にOperationCanceledException出るけど気にしないで、治し方わかんないし、たぶん放置してもいい");
+        }
         private void OnDestory()
         {
             TokenSource.Cancel();
-            Debug.Log("停止時にエラー出るけど気にしないで、治し方わかんない");
         }
 
         async void CollisionLoop(CancellationToken token)

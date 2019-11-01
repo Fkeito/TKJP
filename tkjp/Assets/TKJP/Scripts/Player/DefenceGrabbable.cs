@@ -2,15 +2,9 @@
 {
     public abstract class DefenceGrabbable : TKJPGrabbable
     {
-        private DefenceAttackable DefenceAttackable;
-        protected void AddAttackable<T>() where T : DefenceAttackable {
-            DefenceAttackable = gameObject.AddComponent<T>();
-        }
-
-        protected void RemoveAttackable()
+        protected void AddAttackable<T>() where T : DefenceAttackable
         {
-            Destroy(DefenceAttackable);
-            DefenceAttackable = null;
+            AddComponent<T>();
         }
     }
 }

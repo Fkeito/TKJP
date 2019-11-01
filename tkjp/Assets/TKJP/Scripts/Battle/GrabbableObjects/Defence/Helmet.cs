@@ -9,7 +9,7 @@ namespace TKJP.Battle.GrabbableObjects.Defence
         }
         public void PutOff()
         {
-            RemoveAttackable();
+            RemoveComponent<HelmetAttackable>();
         }
     }
 }
