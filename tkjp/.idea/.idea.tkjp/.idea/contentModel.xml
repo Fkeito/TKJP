@@ -1170,6 +1170,7 @@
             </e>
             <e p="Network" t="Include">
               <e p="MatchGameController.cs" t="Include" />
+              <e p="PhotonRpcCaller.cs" t="Include" />
               <e p="RandomRoomMatcher.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
