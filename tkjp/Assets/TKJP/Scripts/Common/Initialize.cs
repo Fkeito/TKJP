@@ -3,25 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using TKJP.Common.Scene;
+using Oculus.Platform;
 
 namespace TKJP.Common
 {
     public class Initialize : MonoBehaviour
     {
-        void Awake()
-        {
+        private const string APP_ID = "2595891683809723";
+        private bool finishEntitlement = false;
 
-        }
+        private float splashTime = 5f;
+
+        public bool checkEntitlement = true;
 
         void Start()
         {
-            CheckEntitlement();
-            InitSettings();
+            if (checkEntitlement) CheckEntitlement();
+            else
+            {
+                finishEntitlement = true;
+                InitSettings();
+            }
+        }
+        void Update()
+        {
+            splashTime -= Time.deltaTime;
+
+            if(splashTime < 0 && finishEntitlement)
+            {
+                Transition t = this.GetComponent<Transition>();
+                t.Load();
+            }
         }
 
         private void CheckEntitlement()
         {
-            //Todo: 頑張る
+            Core.AsyncInitialize(APP_ID);
+            Entitlements.IsUserEntitledToApplication().OnComplete(OnFinishEntitlementCheck);
         }
         private void InitSettings()
         {
@@ -42,6 +61,18 @@ namespace TKJP.Common
 #endif
                     break;
             }
+        }
+
+        private void OnFinishEntitlementCheck(Message msg)
+        {
+            if (msg.IsError)
+            {
+                //entitlement check is failed
+                return;
+            }
+
+            InitSettings();
+            finishEntitlement = true;
         }
     }
 }
