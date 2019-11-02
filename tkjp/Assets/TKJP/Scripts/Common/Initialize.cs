@@ -10,9 +10,8 @@ namespace TKJP.Common
 {
     public class Initialize : MonoBehaviour
     {
-        private const string APP_ID = "2595891683809723";
+        private const string APP_ID = "2749973231700455";
         private bool finishEntitlement = false;
-
         private float splashTime = 5f;
 
         public bool checkEntitlement = true;
