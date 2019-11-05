@@ -29,9 +29,9 @@ namespace TKJP.Common.Container
         {
             ObjList.Add(typeof(T), obj);
         }
-        public T GetContextObj<T>()
+        public T GetContextObj<T>() where T : class
         {
-            return (T)ObjList[typeof(T)];
+            return (T)ObjList[typeof(T)] ?? null;
         }
     }
 }
