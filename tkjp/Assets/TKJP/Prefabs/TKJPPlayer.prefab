@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 290046373945177975}
   - component: {fileID: 5515642750222172858}
   - component: {fileID: 5515642750222172853}
+  - component: {fileID: 9065473445378633504}
   m_Layer: 0
   m_Name: RightHandAnchor
   m_TagString: Untagged
@@ -710,6 +711,21 @@ MonoBehaviour:
   m_controller: 2
   m_parentTransform: {fileID: 0}
   grabType: 3
+--- !u!114 &9065473445378633504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515642750222172856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e930ab07f4b04490d947dccf2f56fe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabBegin: 0.55
+  grabEnd: 0.35
+  handType: 1
 --- !u!1 &5515642750796746200
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5515642750796746203}
   m_Layer: 0
-  m_Name: TKJPPlayer 1
+  m_Name: TKJPPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 5515642751076424315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 5515642749711904764}
   m_RootOrder: 0
@@ -811,7 +827,7 @@ Transform:
   m_GameObject: {fileID: 5515642751114710721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 647792972440586730}
   m_RootOrder: 0
@@ -840,6 +856,7 @@ GameObject:
   - component: {fileID: 7726405668842581890}
   - component: {fileID: 5515642751199195913}
   - component: {fileID: 5515642751199195912}
+  - component: {fileID: 1303897829170373309}
   m_Layer: 0
   m_Name: LeftHandAnchor
   m_TagString: Untagged
@@ -899,6 +916,21 @@ MonoBehaviour:
   m_controller: 1
   m_parentTransform: {fileID: 0}
   grabType: 3
+--- !u!114 &1303897829170373309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515642751199195919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e930ab07f4b04490d947dccf2f56fe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabBegin: 0.55
+  grabEnd: 0.35
+  handType: 0
 --- !u!1 &6966174702625655022
 GameObject:
   m_ObjectHideFlags: 0

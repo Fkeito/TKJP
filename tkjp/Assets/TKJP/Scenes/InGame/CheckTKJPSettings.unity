@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7fd18bb60c14a31b1caeb6dfa96773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadSceneName: Title
+  loadSceneName: WeaponTrial
   useAsync: 0
   type: 0
   loadTime: 0
