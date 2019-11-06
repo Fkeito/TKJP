@@ -4,6 +4,21 @@ namespace TKJP.Player
 {
     public class TKJPGrabbable : OVRGrabbable
     {
+        public bool resetTransformOnGrabbed;
+        public Vector3 resetLocalPosition;
+        public Vector3 resetLocalRotation;
+
+        public　override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+        {
+            base.GrabBegin(hand, grabPoint);
+
+            if (resetTransformOnGrabbed)
+            {
+                this.transform.localPosition = resetLocalPosition;
+                this.transform.localRotation = Quaternion.Euler(resetLocalRotation);
+            }
+        }
+
         private List<Component> Components = new List<Component>();
         protected T AddComponent<T>() where T : Component
         {
