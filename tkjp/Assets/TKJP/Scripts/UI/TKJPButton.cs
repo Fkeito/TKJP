@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 namespace TKJP.UI
 {
+    [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
     public class TKJPButton: TKJPUI
     {
         public UnityEvent onClick;

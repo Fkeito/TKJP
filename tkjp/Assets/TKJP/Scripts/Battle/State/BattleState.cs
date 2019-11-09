@@ -29,7 +29,6 @@ namespace TKJP.Battle.State
 
         public void Start()
         {
-            isSettled = false;
             time = 0f;
             view.SetActive(true);
         }
@@ -49,6 +48,11 @@ namespace TKJP.Battle.State
         {
             view.SetActive(false);
             Manager.NextTo(isSettled ? State.Result : State.Janken);
+        }
+
+        public void BeSettled()
+        {
+            isSettled = true;
         }
     }
 }
