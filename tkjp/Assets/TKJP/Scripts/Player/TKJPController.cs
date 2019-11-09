@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TKJP.Common;
+using Debug = UnityEngine.Debug;
 
 namespace TKJP.Player
 {

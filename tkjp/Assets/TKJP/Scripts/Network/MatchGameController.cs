@@ -9,7 +9,7 @@ public class MatchGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _randomRoomMatcher = gameObject.AddComponent<RandomRoomMatcher>();
+        _randomRoomMatcher = gameObject.GetComponent<RandomRoomMatcher>();
         _randomRoomMatcher.ConnectStart();
     }
 

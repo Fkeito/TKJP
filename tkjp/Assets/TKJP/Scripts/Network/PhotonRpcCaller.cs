@@ -5,12 +5,35 @@ using System.Reflection;
 using UnityEngine;
 using Photon.Pun;
 using Unity.Collections.LowLevel.Unsafe;
+using Debug = TKJP.Common.Debug;
 
 public class PhotonRpcCaller : MonoBehaviour
 {
     public static PhotonRpcCaller Singleton;
     private PhotonView _PhotonView;
+
+    private void Awake()
+    {
+        Debug.Log("Awake");
+        if (Singleton != null)
+        {
+            DestroyImmediate(this);
+        }
+        Singleton = this;
+    }
     
+    private void OnDestroy()
+    {
+        if (Singleton == this)
+        {
+            Singleton = null;
+        }
+    }
+
+    private void Start()
+    {
+        _PhotonView = GetComponent<PhotonView>();
+    }
 
     //_PhotonView.RPC(methodname);
     public void RPC(string methodName, RpcTarget target, params object[] parameters)
@@ -49,6 +72,16 @@ public class PhotonRpcCaller : MonoBehaviour
         {
             _PhotonView.RPC(methodName, RpcTarget.Others, parameters);
         }
+    }
+
+    public void CallRpc()
+    {
+        this.RPCToOthers("CallDebug","やったぜ，繋がった");
+    }
+    [PunRPC]
+    private void CallDebug(string msg)
+    {
+        Debug.Log(msg);
     }
 }
 
