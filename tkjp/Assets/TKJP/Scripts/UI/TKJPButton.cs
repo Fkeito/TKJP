@@ -11,24 +11,23 @@ namespace TKJP.UI
         private SpriteRenderer sprite;
 
         private Color defaultColor = new Color(1f, 1f, 1f);
-        private Color clickedColor = new Color(0.75f, 0.75f, 0.75f);
+        private Color hoverColor = new Color(0.8f, 0.8f, 0.8f);
+        private Color clickedColor = new Color(0.5f, 0.5f, 0.5f);
 
         void Start()
         {
             sprite = this.GetComponent<SpriteRenderer>();
             sprite.color = defaultColor;
-            sprite.material.SetFloat("_OutLineSpread", 0f);
         }
 
         public override void OnTouchBegin()
         {
             //Todo: バイブレーション
-            sprite.material.SetFloat("_OutLineSpread", 0.02f);
+            sprite.color = hoverColor;
         }
         public override void OnTouchEnd()
         {
             sprite.color = defaultColor;
-            sprite.material.SetFloat("_OutLineSpread", 0f);
         }
         public override void OnGrabBegin()
         {
@@ -38,7 +37,6 @@ namespace TKJP.UI
         {
             onClick.Invoke();
             sprite.color = defaultColor;
-            sprite.material.SetFloat("_OutLineSpread", 0f);
         }
     }
 }
