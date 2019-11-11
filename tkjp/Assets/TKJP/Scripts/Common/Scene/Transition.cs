@@ -50,7 +50,7 @@ namespace TKJP.Common.Scene
         {
             if (loaded) return;
 
-            SceneManager.LoadScene(loadSceneName);
+            SceneManager.LoadScene(sceneName);
             loaded = true;
         }
 
