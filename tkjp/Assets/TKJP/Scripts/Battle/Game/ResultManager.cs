@@ -13,9 +13,20 @@ namespace TKJP.Battle.Game
         private float transitionTime = 5f;
         private float time;
 
+        public GameObject win;
+        public GameObject lose;
+
         void OnEnable()
         {
-            //Todo: 表示を変える
+            switch (result)
+            {
+                case Result.Win:
+                    win.SetActive(true);
+                    break;
+                case Result.Lose:
+                    lose.SetActive(true);
+                    break;
+            }
             time = 0f;
         }
 
