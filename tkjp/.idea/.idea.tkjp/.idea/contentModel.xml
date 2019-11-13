@@ -1145,7 +1145,30 @@
         </e>
         <e p="TKJP" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Battle" t="Include">
+              <e p="GrabbableObjects" t="Include">
+                <e p="Attack" t="Include">
+                  <e p="Sword.cs" t="Include" />
+                  <e p="SwordAttacker.cs" t="Include" />
+                </e>
+                <e p="Defence" t="Include">
+                  <e p="BigShield.cs" t="Include" />
+                  <e p="Helmet.cs" t="Include" />
+                  <e p="HelmetAttackable.cs" t="Include" />
+                  <e p="ShieldAttackable.cs" t="Include" />
+                  <e p="SmallShield.cs" t="Include" />
+                  <e p="Test" t="Include">
+                    <e p="HelmetTester.cs" t="Include" />
+                    <e p="ShieldTester.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
             <e p="Common" t="Include">
+              <e p="Container" t="Include">
+                <e p="SceneContainer.cs" t="Include" />
+              </e>
+              <e p="Debug.cs" t="Include" />
               <e p="Initialize.cs" t="Include" />
               <e p="Scene" t="Include">
                 <e p="ITransitionTerm.cs" t="Include" />
@@ -1160,6 +1183,10 @@
                 <e p="DemoAttackable.cs" t="Include" />
                 <e p="IAttackable.cs" t="Include" />
               </e>
+              <e p="Hp" t="Include">
+                <e p="HpAgent.cs" t="Include" />
+                <e p="IHpHolder.cs" t="Include" />
+              </e>
               <e p="Result" t="Include">
                 <e p="IResult.cs" t="Include" />
                 <e p="ResultEnum.cs" t="Include" />
@@ -1172,14 +1199,26 @@
               <e p="MatchGameController.cs" t="Include" />
               <e p="PhotonRpcCaller.cs" t="Include" />
               <e p="RandomRoomMatcher.cs" t="Include" />
+              <e p="TestNetWork.cs" t="Include" />
+              <e p="TestNetWorkforClient.cs" t="Include" />
+              <e p="TestScript.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="Attacker.cs" t="Include" />
               <e p="AttackGrabbable.cs" t="Include" />
-              <e p="DifferenceGrabbable.cs" t="Include" />
+              <e p="DefenceAttackable.cs" t="Include" />
+              <e p="DefenceGrabbable.cs" t="Include" />
               <e p="TKJPController.cs" t="Include" />
               <e p="TKJPGoController.cs" t="Include" />
               <e p="TKJPGrabbable.cs" t="Include" />
               <e p="TKJPGrabber.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="ButtonTest.cs" t="Include" />
+              <e p="ITKJPUI.cs" t="Include" />
+              <e p="TKJPButton.cs" t="Include" />
+              <e p="TKJPUI.cs" t="Include" />
+              <e p="TKJPUIHand.cs" t="Include" />
             </e>
           </e>
         </e>
