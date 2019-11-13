@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.Events;
 using Photon.Pun;
+using Photon.Realtime;
 using Unity.Collections.LowLevel.Unsafe;
 using Debug = TKJP.Common.Debug;
+using Random = UnityEngine.Random;
 
 public class PhotonRpcCaller : MonoBehaviour
 {
     public static PhotonRpcCaller Singleton;
     private PhotonView _PhotonView;
+    public event Action <string> CreateAction = null;
 
     private void Awake()
     {
@@ -74,6 +78,11 @@ public class PhotonRpcCaller : MonoBehaviour
         }
     }
 
+    public void CallMethodAction(string str)
+    {
+        CreateAction(str);
+        Debug.Log("Call Action");
+    }
     public void CallRpc()
     {
         this.RPCToOthers("CallDebug","やったぜ，繋がった");
@@ -82,6 +91,28 @@ public class PhotonRpcCaller : MonoBehaviour
     private void CallDebug(string msg)
     {
         Debug.Log(msg);
+    }
+
+//    public void TestAAA()
+//    {
+//        this.RPCToOthers("CallDebug","よろしくお願いします！！");
+//    }
+
+    public void CreateObj(string prefabId)
+    {
+        var v = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f));
+        PhotonNetwork.Instantiate(prefabId, v, Quaternion.identity);
+    }
+
+    private void OnEnable()
+    {
+        //呼び出したいメソッドをEventに代入
+        this.CreateAction += CreateObj;
+    }
+
+    private void OnDisable()
+    {
+        this.CreateAction -= CreateObj;
     }
 }
 
