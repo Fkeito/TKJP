@@ -19,6 +19,8 @@ public class RandomRoomMatcher : MonoBehaviourPunCallbacks
     {
         if (isRoomMakeable)
         {
+            Photon.Realtime.Player player = PhotonNetwork.LocalPlayer;
+            Debug.Log(player.UserId);
             PhotonNetwork.JoinOrCreateRoom("room", new RoomOptions(), TypedLobby.Default);
             Debug.Log("マッチ成功");
             isRoomMakeable = false;
@@ -31,6 +33,9 @@ public class RandomRoomMatcher : MonoBehaviourPunCallbacks
         if (isRoomJoin)
         {
             tex.text = "接続したよー";
+            string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId;
+            Debug.Log(otherplayerId);
+            int myplayerId = PhotonNetwork.LocalPlayer.ActorNumber;
         }
     }
     

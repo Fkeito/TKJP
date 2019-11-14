@@ -1198,6 +1198,7 @@
             <e p="Network" t="Include">
               <e p="MatchGameController.cs" t="Include" />
               <e p="MoveObject.cs" t="Include" />
+              <e p="NetWorkTransform.cs" t="Include" />
               <e p="PhotonRpcCaller.cs" t="Include" />
               <e p="RandomRoomMatcher.cs" t="Include" />
               <e p="TestNetWork.cs" t="Include" />
