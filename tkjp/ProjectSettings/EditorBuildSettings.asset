@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TKJP/Scenes/InGame/WeaponTrial.unity
     guid: 76b6f9292666747dd945bfed693af3ff
+  - enabled: 1
+    path: Assets/TKJP/Scenes/Test/BattleTest.unity
+    guid: c8ab22f9758b349e79f5c21335c3d888
   m_configObjects: {}

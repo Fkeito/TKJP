@@ -11,6 +11,11 @@ namespace TKJP.Battle.Game
         private ReadyState state;
         public Transition transition;
 
+        void Start()
+        {
+            state = Manager.GetState<ReadyState>();
+        }
+
         public void IsReady()
         {
             state.MasterGetReady();

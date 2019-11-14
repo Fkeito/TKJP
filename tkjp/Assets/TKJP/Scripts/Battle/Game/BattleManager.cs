@@ -14,13 +14,19 @@ namespace TKJP.Battle.Game
         private ResultManager result;
         private TKJPGrabber.GrabType grabType;
 
-        public ScarecrowController clientPlayer;
+        public ScarecrowController/*PlayerController*/ clientPlayer;
         //public PlayerController masterPlayer;
+
+        public GameObject[] weapons;
+        private WeaponManager weaponManager;
 
         void Start()
         {
             state = Manager.GetState<BattleState>();
             result = Manager.GetStateObj(State.State.Result).GetComponent<ResultManager>();
+
+            weaponManager = WeaponManager.Singleton;
+            weaponManager.SetWeaponInfo(weapons);
 
             clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
@@ -34,6 +40,14 @@ namespace TKJP.Battle.Game
         void OnDisable()
         {
             grabType = TKJPGrabber.GrabType.None;
+
+            foreach (GameObject weapon in weapons)
+            {
+                weapon.SetActive(true);
+                Trs resetTrs = weaponManager?.GetFirstTrs(weapon) ?? new Trs(weapon.transform);
+                weapon.transform.position = resetTrs.position;
+                weapon.transform.rotation = resetTrs.rotation;
+            }
         }
 
         public void SetGrabType(int jankenResult)

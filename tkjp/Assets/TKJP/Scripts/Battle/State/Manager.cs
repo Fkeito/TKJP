@@ -10,12 +10,13 @@ namespace TKJP.Battle.State
 
         private IState[] stateList;
         private int stateCount;
-        private State currentState;
+        private static State currentState;
 
         public GameObject readyView;
         public GameObject jankenView;
         public GameObject battleView;
         public GameObject resultView;
+        private GameObject[] views;
 
         void Awake()
         {
@@ -29,9 +30,10 @@ namespace TKJP.Battle.State
             SetStateList();
 
             foreach (IState state in stateList) state.Initialize();
+            views = new GameObject[] { readyView, jankenView, battleView, resultView };
 
             currentState = 0;
-            stateList[(int)currentState].Start();
+            NextTo(currentState);
         }
         void Update()
         {
@@ -49,10 +51,14 @@ namespace TKJP.Battle.State
 
         private void SetStateList()
         {
-            stateList[(int)State.Ready] = new ReadyState(readyView);
-            stateList[(int)State.Janken] = new JankenState(jankenView);
-            stateList[(int)State.Battle] = new BattleState(battleView);
-            stateList[(int)State.Result] = new ResultState(resultView);
+            stateList[(int)State.Ready] = new ReadyState();
+            stateList[(int)State.Janken] = new JankenState();
+            stateList[(int)State.Battle] = new BattleState();
+            stateList[(int)State.Result] = new ResultState();
+        }
+        public static State GetCurrentState()
+        {
+            return currentState;
         }
         public static T GetState<T>() where T: class, IState
         {
@@ -87,8 +93,13 @@ namespace TKJP.Battle.State
         {
             if (instance)
             {
-                instance.currentState = state;
+                currentState = state;
                 instance.stateList[(int)state].Start();
+                foreach(GameObject view in instance.views)
+                {
+                    view.SetActive(false);
+                }
+                instance.views[(int)state].SetActive(true);
             }
         }
     }

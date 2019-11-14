@@ -15,29 +15,29 @@ namespace TKJP.UI
         private Color hoverColor = new Color(0.8f, 0.8f, 0.8f);
         private Color clickedColor = new Color(0.5f, 0.5f, 0.5f);
 
-        void Start()
+        protected virtual void Start()
         {
             sprite = this.GetComponent<SpriteRenderer>();
-            sprite.color = defaultColor;
+            if(sprite.sprite != null) sprite.color = defaultColor;
         }
 
         public override void OnTouchBegin()
         {
             //Todo: バイブレーション
-            sprite.color = hoverColor;
+            if (sprite.sprite != null) sprite.color = hoverColor;
         }
         public override void OnTouchEnd()
         {
-            sprite.color = defaultColor;
+            if (sprite.sprite != null) sprite.color = defaultColor;
         }
         public override void OnGrabBegin()
         {
-            sprite.color = clickedColor;
+            if (sprite.sprite != null) sprite.color = clickedColor;
         }
         public override void OnGrabEnd()
         {
             onClick.Invoke();
-            sprite.color = defaultColor;
+            if (sprite.sprite != null) sprite.color = defaultColor;
         }
     }
 }

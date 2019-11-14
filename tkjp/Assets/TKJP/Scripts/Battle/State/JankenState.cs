@@ -7,13 +7,6 @@ namespace TKJP.Battle.State
 {
     public class JankenState: IState
     {
-        public JankenState(GameObject view)
-        {
-            this.view = view;
-        }
-
-        private GameObject view;
-
         public TimeEvent onTimeChanged;
         public UnityEvent onTimeFinished;
 
@@ -38,7 +31,6 @@ namespace TKJP.Battle.State
             time = 0f;
             next = false;
             jadging = false;
-            view.SetActive(true);
         }
 
         public void Update()
@@ -70,7 +62,6 @@ namespace TKJP.Battle.State
 
         public void NextTo()
         {
-            view.SetActive(false);
             Manager.NextTo(State.Battle);
         }
     }

@@ -6,13 +6,6 @@ namespace TKJP.Battle.State
 {
     public class ReadyState: IState
     {
-        public ReadyState(GameObject view)
-        {
-            this.view = view;
-        }
-
-        private GameObject view;
-
         private bool masterIsReady;
         private bool clientIsReady;
 
@@ -24,7 +17,6 @@ namespace TKJP.Battle.State
         public void Start()
         {
             Initialize();
-            view.SetActive(true);
         }
 
         public void Update()

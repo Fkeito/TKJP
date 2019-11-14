@@ -6,13 +6,6 @@ namespace TKJP.Battle.State
 {
     public class BattleState : IState
     {
-        public BattleState(GameObject view)
-        {
-            this.view = view;
-        }
-
-        private GameObject view;
-
         public TimeEvent onTimeChanged;
 
         private bool isSettled;
@@ -30,7 +23,6 @@ namespace TKJP.Battle.State
         public void Start()
         {
             time = 0f;
-            view.SetActive(true);
         }
 
         public void Update()
@@ -46,7 +38,6 @@ namespace TKJP.Battle.State
 
         public void NextTo()
         {
-            view.SetActive(false);
             Manager.NextTo(isSettled ? State.Result : State.Janken);
         }
 

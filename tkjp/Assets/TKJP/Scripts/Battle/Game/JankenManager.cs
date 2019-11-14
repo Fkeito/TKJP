@@ -10,7 +10,7 @@ namespace TKJP.Battle.Game
         private BattleManager battle;
 
         private int masterHand { get { return masterHand; } set { masterHand = value % 3; } }
-        private int clientHand { get { return clientHand; } set { clientHand = value % 3; } }
+        public int clientHand { get { return clientHand; } set { clientHand = value % 3; } }
 
         void Start()
         {
@@ -29,6 +29,10 @@ namespace TKJP.Battle.Game
         public void SetHand(int i)
         {
             masterHand = i;
+        }
+        public void SetClientHand(int i)
+        {
+            clientHand = i;
         }
         public void Jadge()
         {
