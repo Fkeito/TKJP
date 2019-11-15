@@ -1,38 +1,88 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TKJP.Battle.State;
 
 namespace TKJP.Battle.Game
 {
-    public class JankenManager : MonoBehaviour
+    public class JankenManager : MonoBehaviour, IState
     {
         private BattleManager battle;
 
-        private int masterHand { get { return masterHand; } set { masterHand = value % 3; } }
-        public int clientHand { get { return clientHand; } set { clientHand = value % 3; } }
+        private JankenHand masterHand;
+        private JankenHand clientHand;
 
-        void Start()
+        public TimeEvent onTimeChanged;
+        public UnityEvent onTimeFinished;
+
+        private float jankenTime;
+        private float time;
+
+        private bool jadging;
+        private bool next;
+
+        public void Initialize()
         {
-            var state = State.Manager.GetState<JankenState>();
+            onTimeChanged = new TimeEvent();
 
-            battle = State.Manager.GetStateObj(State.State.Battle).GetComponent<BattleManager>();
+            jankenTime = 3f;
+            time = 0f;
+            next = false;
+            jadging = false;
 
-            state.onTimeFinished.AddListener(Jadge);
+            battle = Manager.GetState<BattleManager>();
         }
 
-        void OnEnable()
+        public void OnChanged()
         {
-            masterHand = clientHand = 0;
+            time = 0f;
+            next = false;
+            jadging = false;
         }
 
-        public void SetHand(int i)
+        public void OnUpdate()
         {
-            masterHand = i;
+            if (time <= jankenTime)
+            {
+                time += Time.deltaTime;
+                onTimeChanged.Invoke(time);
+            }
+            else if (!jadging)
+            {
+                jadging = true;
+                Debug.Log("Jadge" + clientHand.ToString() + " vs. " + masterHand.ToString());
+                Jadge();
+            }
         }
-        public void SetClientHand(int i)
+
+        public void FinishJadging()
         {
-            clientHand = i;
+            if (jadging)
+            {
+                next = true;
+            }
+        }
+
+        public bool IsFinish()
+        {
+            return next;
+        }
+
+        public void NextTo()
+        {
+            Manager.NextTo(State.State.Battle);
+        }
+
+        public void SetJankenHand(int i)
+        {
+            masterHand = (JankenHand)i;
+            Debug.Log("master hand is " + i);
+        }
+        public void SetClientJankenHand(int i)
+        {
+            clientHand = (JankenHand)i;
+            Debug.Log(" hand is " + i);
         }
         public void Jadge()
         {
@@ -43,7 +93,22 @@ namespace TKJP.Battle.Game
             int result = (masterHand - clientHand + 3) % 3;
             //Todo: 演出
             yield return null;
-            battle.SetGrabType(result);
+            if (result != 0)
+            {
+                battle.SetGrabType(result);
+                next = true;
+            }
+            else
+            {
+                OnChanged();
+            }
+        }
+
+        public enum JankenHand
+        {
+            rock = 0,
+            sissors = 1,
+            paper = 2
         }
     }
 }

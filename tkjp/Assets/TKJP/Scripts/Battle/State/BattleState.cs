@@ -20,12 +20,12 @@ namespace TKJP.Battle.State
             time = 0f;
         }
 
-        public void Start()
+        public void OnChanged()
         {
             time = 0f;
         }
 
-        public void Update()
+        public void OnUpdate()
         {
             time += Time.deltaTime;
             onTimeChanged.Invoke(time);

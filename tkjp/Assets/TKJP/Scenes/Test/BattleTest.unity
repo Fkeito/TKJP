@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1523499662}
-  win: {fileID: 0}
-  lose: {fileID: 0}
+  win: {fileID: 1982541877}
+  lose: {fileID: 408352267}
 --- !u!1 &129476920
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +560,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923173824}
+        m_MethodName: BackMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!65 &182516217
@@ -1472,10 +1483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3109706784524414882b9997122c86b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readyView: {fileID: 923173822}
-  jankenView: {fileID: 1663919410}
-  battleView: {fileID: 373979571}
-  resultView: {fileID: 107812489}
+  ready: {fileID: 923173824}
+  janken: {fileID: 1663919412}
+  battle: {fileID: 373979573}
+  result: {fileID: 107812491}
 --- !u!4 &951481103
 Transform:
   m_ObjectHideFlags: 0
@@ -2268,7 +2279,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 923173824}
-        m_MethodName: IsReady
+        m_MethodName: MasterGetReady
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2468,6 +2479,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6298714375a44dd8ba3328825db65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTimeFinished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1735854859
 PrefabInstance:
   m_ObjectHideFlags: 0

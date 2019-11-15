@@ -5,8 +5,8 @@ namespace TKJP.Battle.State
     public interface IState
     {
         void Initialize();
-        void Start();
-        void Update();
+        void OnChanged();
+        void OnUpdate();
         bool IsFinish();
         void NextTo();
     }

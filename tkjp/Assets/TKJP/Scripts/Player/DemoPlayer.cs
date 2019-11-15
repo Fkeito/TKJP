@@ -28,16 +28,21 @@ namespace TKJP.Player
             switch (state)
             {
                 case State.Ready:
-                    Manager.GetState<ReadyState>().ClientGetReady();
+                    StartCoroutine(DelayMethod(1f, () => Manager.GetState<ReadyManager>().ClientGetReady()));
                     break;
                 case State.Janken:
-                    Manager.GetStateObj(Manager.GetCurrentState()).GetComponent<JankenManager>().SetClientHand(Random.Range(0, 3));
+                    StartCoroutine(DelayMethod(1f, () => Manager.GetState<JankenManager>().SetClientJankenHand(Random.Range(0, 3))));
                     break;
                 case State.Battle:
                     break;
                 case State.Result:
                     break;
             }
+        }
+        private IEnumerator DelayMethod(float delayTime, System.Action action)
+        {
+            yield return new WaitForSeconds(delayTime);
+            action();
         }
     }
 

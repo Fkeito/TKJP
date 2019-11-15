@@ -26,14 +26,14 @@ namespace TKJP.Battle.State
             jadging = false;
         }
 
-        public void Start()
+        public void OnChanged()
         {
             time = 0f;
             next = false;
             jadging = false;
         }
 
-        public void Update()
+        public void OnUpdate()
         {
             if (time <= jankenTime)
             {

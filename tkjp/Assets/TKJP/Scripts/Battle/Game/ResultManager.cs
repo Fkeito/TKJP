@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TKJP.Battle.State;
 using TKJP.Common.Scene;
 
 namespace TKJP.Battle.Game
 {
-    public class ResultManager : MonoBehaviour
+    public class ResultManager : MonoBehaviour, IState
     {
         private Result result;
 
@@ -16,7 +17,12 @@ namespace TKJP.Battle.Game
         public GameObject win;
         public GameObject lose;
 
-        void OnEnable()
+        public void Initialize()
+        {
+
+        }
+
+        public void OnChanged()
         {
             switch (result)
             {
@@ -30,13 +36,23 @@ namespace TKJP.Battle.Game
             time = 0f;
         }
 
-        void Update()
+        public void OnUpdate()
         {
             time += Time.deltaTime;
-            if(time > transitionTime)
+            if (time > transitionTime)
             {
                 transition.Load();
             }
+        }
+
+        public bool IsFinish()
+        {
+            return false;
+        }
+
+        public void NextTo()
+        {
+
         }
 
         public void SetResult(Result result)

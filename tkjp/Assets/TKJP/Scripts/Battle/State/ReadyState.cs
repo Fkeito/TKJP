@@ -14,12 +14,12 @@ namespace TKJP.Battle.State
             masterIsReady = clientIsReady = false;
         }
 
-        public void Start()
+        public void OnChanged()
         {
             Initialize();
         }
 
-        public void Update()
+        public void OnUpdate()
         {
 
         }

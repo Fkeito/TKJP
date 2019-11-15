@@ -8,9 +8,8 @@ using TKJP.Feature.Hp;
 
 namespace TKJP.Battle.Game
 {
-    public class BattleManager : MonoBehaviour
+    public class BattleManager : MonoBehaviour, IState
     {
-        private BattleState state;
         private ResultManager result;
         private TKJPGrabber.GrabType grabType;
 
@@ -20,16 +19,52 @@ namespace TKJP.Battle.Game
         public GameObject[] weapons;
         private WeaponManager weaponManager;
 
-        void Start()
+        public TimeEvent onTimeChanged;
+
+        private bool isSettled;
+        private float battleTime;
+        private float time;
+
+        public void Initialize()
         {
-            state = Manager.GetState<BattleState>();
-            result = Manager.GetStateObj(State.State.Result).GetComponent<ResultManager>();
+            onTimeChanged = new TimeEvent();
+            isSettled = false;
+            battleTime = 5f;
+            time = 0f;
+
+            result = Manager.GetState<ResultManager>();
 
             weaponManager = WeaponManager.Singleton;
             weaponManager.SetWeaponInfo(weapons);
 
             clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
+        }
+
+        public void OnChanged()
+        {
+            time = 0f;
+        }
+
+        public void OnUpdate()
+        {
+            time += Time.deltaTime;
+            onTimeChanged.Invoke(time);
+        }
+
+        public bool IsFinish()
+        {
+            return time > battleTime || isSettled;
+        }
+
+        public void NextTo()
+        {
+            Manager.NextTo(isSettled ? State.State.Result : State.State.Janken);
+        }
+
+        public void BeSettled()
+        {
+            isSettled = true;
         }
 
         void OnEnable()
@@ -69,7 +104,7 @@ namespace TKJP.Battle.Game
         public void BeSettled(Result result)
         {
             this.result?.SetResult(result);
-            state?.BeSettled();
+            BeSettled();
         }
     }
 }

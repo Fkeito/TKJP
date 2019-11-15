@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TKJP.Battle.Game;
 
 namespace TKJP.Battle.State
 {
@@ -12,10 +13,10 @@ namespace TKJP.Battle.State
         private int stateCount;
         private static State currentState;
 
-        public GameObject readyView;
-        public GameObject jankenView;
-        public GameObject battleView;
-        public GameObject resultView;
+        public ReadyManager ready;
+        public JankenManager janken;
+        public BattleManager battle;
+        public ResultManager result;
         private GameObject[] views;
 
         void Awake()
@@ -30,7 +31,7 @@ namespace TKJP.Battle.State
             SetStateList();
 
             foreach (IState state in stateList) state.Initialize();
-            views = new GameObject[] { readyView, jankenView, battleView, resultView };
+            views = new GameObject[] { ready.gameObject, janken.gameObject, battle.gameObject, result.gameObject };
 
             currentState = 0;
             NextTo(currentState);
@@ -38,7 +39,7 @@ namespace TKJP.Battle.State
         void Update()
         {
             IState current = stateList[(int)currentState];
-            current.Update();
+            current.OnUpdate();
             if (current.IsFinish()) current.NextTo();
         }
         void OnDestroy()
@@ -51,10 +52,10 @@ namespace TKJP.Battle.State
 
         private void SetStateList()
         {
-            stateList[(int)State.Ready] = new ReadyState();
-            stateList[(int)State.Janken] = new JankenState();
-            stateList[(int)State.Battle] = new BattleState();
-            stateList[(int)State.Result] = new ResultState();
+            stateList[(int)State.Ready] = ready;
+            stateList[(int)State.Janken] = janken;
+            stateList[(int)State.Battle] = battle;
+            stateList[(int)State.Result] = result;
         }
         public static State GetCurrentState()
         {
@@ -77,13 +78,13 @@ namespace TKJP.Battle.State
             switch (state)
             {
                 case State.Ready:
-                    return instance?.readyView;
+                    return instance?.ready?.gameObject;
                 case State.Janken:
-                    return instance?.jankenView;
+                    return instance?.janken?.gameObject;
                 case State.Battle:
-                    return instance?.battleView;
+                    return instance?.battle?.gameObject;
                 case State.Result:
-                    return instance?.resultView;
+                    return instance?.result?.gameObject;
                 default:
                     return null;
             }
@@ -94,7 +95,7 @@ namespace TKJP.Battle.State
             if (instance)
             {
                 currentState = state;
-                instance.stateList[(int)state].Start();
+                instance.stateList[(int)state].OnChanged();
                 foreach(GameObject view in instance.views)
                 {
                     view.SetActive(false);

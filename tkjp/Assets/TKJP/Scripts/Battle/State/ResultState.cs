@@ -11,12 +11,12 @@ namespace TKJP.Battle.State
 
         }
 
-        public void Start()
+        public void OnChanged()
         {
 
         }
 
-        public void Update()
+        public void OnUpdate()
         {
 
         }
