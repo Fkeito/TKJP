@@ -1,0 +1,224 @@
+[33mcommit 9d2e5ae5035b591ea786edac6283ca11dde9d35a[m[33m ([m[1;36mHEAD -> [m[1;32mRoomMatch[m[33m, [m[1;31morigin/RoomMatch[m[33m)[m
+Merge: 23e515a d6b641d
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Sat Nov 16 12:48:21 2019 +0900
+
+    しっかりコミット出来てるかな
+
+[33mcommit 23e515a5e60752c886bb4232f9b842844dab1e47[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Fri Nov 15 03:48:10 2019 +0900
+
+    途中経過
+
+[33mcommit d6b641dbd064dac2f6641cabf32e433653e8b812[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Fri Nov 15 03:48:10 2019 +0900
+
+    途中経過
+
+[33mcommit 3a35e10a68ffd5f2d21d808da8889c089071da09[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Thu Nov 14 04:41:15 2019 +0900
+
+    Eventでの呼び出しが可能になった
+
+[33mcommit d9537b47d02aa8d0116d4db5c462ba651101cdb1[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Thu Nov 14 01:40:43 2019 +0900
+
+    eventのテスト
+
+[33mcommit 0e7247827f3e2c88975ad42005a0edd8d981efa2[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Mon Nov 11 10:07:56 2019 +0900
+
+    .ideaの整理
+
+[33mcommit 1030d49481355d98c19e16bbfb1fc1805c2992e8[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Sat Nov 9 21:57:55 2019 +0900
+
+    CallPUN
+
+[33mcommit 0ebd152de29f4787592587198d1f4c3f35df44ee[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Sat Nov 2 14:03:35 2019 +0900
+
+    中間
+
+[33mcommit 293f8c1f99ce899c2e9aafcdb2330d915f68d139[m
+Author: Fkeito <kei1229tomi@gmail.com>
+Date:   Sat Nov 2 14:47:28 2019 +0900
+
+    fixed project settings
+
+[33mcommit 0095216479260aeec39701b54f4658e9483d499b[m
+Merge: a357b87 f83e019
+Author: Fkeito <kei1229tomi@gmail.com>
+Date:   Fri Nov 1 18:13:13 2019 +0900
+
+    Merge branch 'UI' into develop
+
+[33mcommit f83e019550d6da8f83a3a2dbe95d5bb8cf9042a3[m
+Author: Fkeito <kei1229tomi@gmail.com>
+Date:   Fri Nov 1 18:10:24 2019 +0900
+
+    made button
+
+[33mcommit a357b876de07b5609635820cb706acaf43215a5b[m
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Fri Nov 1 16:52:24 2019 +0900
+
+    AttackTokaIroiro (#12)
+
+[33mcommit 1d9cc543d8f45ddfbbb40861ee9bc79b7cfa1a99[m
+Author: Fkeito <kei1229tomi@gmail.com>
+Date:   Fri Nov 1 09:28:12 2019 +0900
+
+    Button Ga Osesou
+
+[33mcommit 3a9cb26ff5281df38478a4e2cef70e62feeb151d[m
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Fri Nov 1 09:16:17 2019 +0900
+
+    Feature/defence (#11)
+    
+    * Defence
+    
+    * DeleteProto
+    
+    * Helmet
+    
+    * Shiled helmettest
+    
+    * shield test
+
+[33mcommit b8e04aa21d855f010bf6e549f91cc6f85cc541d4[m
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Fri Nov 1 05:50:08 2019 +0900
+
+    AddContainer (#10)
+
+[33mcommit f22c0d203bc222464911ffb6968f03b8f4fb8aa7[m
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Fri Nov 1 05:06:43 2019 +0900
+
+    hpowari (#9)
+
+[33mcommit 922baa9d0a9caa8a8525139de501afcec35edcda[m
+Merge: b628ac5 4482c3d
+Author: HnakadouriN <40082170+HnakadouriN@users.noreply.github.com>
+Date:   Thu Oct 31 23:05:23 2019 +0900
+
+    Merge pull request #8 from Fkeito/RoomMatch
+    
+    CreateRoom
+
+[33mcommit 4482c3d1dc1495f8ef38fdc9729dc81b4c92576a[m
+Author: HnakadouriN <hasebenaoki0908@docomo.ne.jp>
+Date:   Thu Oct 31 22:59:26 2019 +0900
+
+    CreateRoom
+
+[33mcommit b628ac5a6b0ac49849f502f81095f73c459cf9bf[m
+Merge: dbb1dbc 2cc7dbc
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Thu Oct 31 22:56:51 2019 +0900
+
+    Merge pull request #7 from Fkeito/feature/attack
+    
+    changenamespace
+
+[33mcommit 2cc7dbc0e51d04d9b93598813c6ddb4cce5b64db[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Thu Oct 31 22:54:49 2019 +0900
+
+    changenamespace
+
+[33mcommit dbb1dbc680f84b4ea46104cdf5ca34d48a39af8b[m
+Merge: 13b723f 6eaa36f
+Author: Imamura(Moosan) <washer2016@outlook.jp>
+Date:   Tue Oct 29 20:27:33 2019 +0900
+
+    Merge pull request #5 from Fkeito/feature/attack
+    
+    Feature/attack
+
+[33mcommit 6eaa36fdf3a6b1397682557806a1c1315ce4e976[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Tue Oct 29 20:22:39 2019 +0900
+
+    Merge
+
+[33mcommit a9014404a26ea531e0745abbae39235606b16888[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Mon Oct 14 05:00:50 2019 +0900
+
+    async/await tukatta kedo yoku wakaranakatta gomen
+
+[33mcommit cada48203e720cbcb3811bedc7ac140900f93bca[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Sun Oct 13 17:53:07 2019 +0900
+
+    UniRX
+
+[33mcommit 66333d0ba342776e071ec379f1b0527284f05ec0[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Sun Oct 13 14:58:32 2019 +0900
+
+    OnTrigger -> OnCollision
+
+[33mcommit 287c52c5e0323fb636b71ae86b222658aa56be88[m
+Author: Moosan <washer2016@outlook.jp>
+Date:   Sun Oct 13 03:44:48 2019 +0900
+
+    AttackTest
+
+[33mcommit 13b723f73e41bc09d0ed586cd6b622501b28f1f3[m
+Author: Fkeito <1417089@ed.tus.ac.jp>
+Date:   Tue Oct 29 18:22:16 2019 +0900
+
+    Client: made tkjp hand controller (#2)
+    
+    * add oculus settings
+    
+    * recognize platform
+    
+    * sceneTransition
+    
+    * 手の大元の表示非表示のところを作りました
+    
+    * Add Player Prehabs
+    
+    * EditorHand
+    
+    * て多分完成
+    
+    * プレハブ修正
+    
+    * Fixed first scenes setting
+
+[33mcommit 2ffcc42f46ac414c4e7fc7080941f635366817dd[m
+Author: Fkeito <1417089@ed.tus.ac.jp>
+Date:   Tue Oct 29 18:12:11 2019 +0900
+
+    Client: scene transition (#1)
+    
+    * add oculus settings
+    
+    * recognize platform
+    
+    * sceneTransition
+
+[33mcommit a2d794749a9b10626fefa437fb33036a6770bcf3[m
+Author: Fkeito <kei1229tomi@gmail.com>
+Date:   Sat Oct 5 12:34:36 2019 +0900
+
+    add Unity project
+
+[33mcommit 65072bbcb63e0e7027468874e9c727e27766afdc[m
+Author: Fkeito <1417089@ed.tus.ac.jp>
+Date:   Sat Oct 5 12:00:25 2019 +0900
+
+    Initial commit
