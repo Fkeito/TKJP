@@ -46,4 +46,9 @@ public class ScarecrowController : MonoBehaviour, IAttackable
         agent.AddDamege(state.Damage);
         return AttackResult.Success();
     }
+
+    public IReadOnlyHpHolder GetHp()
+    {
+        return HpHolder;
+    }
 }
