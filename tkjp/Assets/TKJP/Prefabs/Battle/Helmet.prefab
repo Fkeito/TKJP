@@ -90,6 +90,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 96937429572510971}
     m_Modifications:
+    - target: {fileID: 400000, guid: 8d695736fd2ea44edbba0ce8d65c4e7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8d695736fd2ea44edbba0ce8d65c4e7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8d695736fd2ea44edbba0ce8d65c4e7f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 8d695736fd2ea44edbba0ce8d65c4e7f, type: 3}
       propertyPath: m_Name
       value: helmet
