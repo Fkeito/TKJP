@@ -5,7 +5,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TestScript : MonoBehaviour
+public class CreatePrefab : MonoBehaviour
 {
     private void Start()
     {
@@ -14,6 +14,6 @@ public class TestScript : MonoBehaviour
 
     public void InstantiateCube()
     {
-        PhotonRpcCaller.Singleton.CallMethodAction("Cube");
+        PhotonRpcCaller.Singleton.CallCreateAction("Cube");
     }
 }
