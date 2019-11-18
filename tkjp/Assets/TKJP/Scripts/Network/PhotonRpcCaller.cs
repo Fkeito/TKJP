@@ -155,6 +155,7 @@ public class PhotonRpcCaller : MonoBehaviour
 
     private void OnDisable()
     {
+        //消したいメソッドをEventから抜き出す
         this.CreateAction -= CreateObj;
         this.Ready += SendMessageforReady;
         this.Janken += SendCommandforJanken;
