@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aafaa9c-98c9-4efd-a987-1e58819e9c6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tkjp/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tkjp/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tkjp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tkjp/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="165">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <marker date="1574044670931" expanded="false" signature="6:136" ph="..." />
                 <marker date="1574044670931" expanded="true" signature="179:389" ph="{...}" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/SendMessageCtoM.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <marker date="1574044670952" expanded="false" signature="6:96" ph="..." />
                 <marker date="1574044670952" expanded="true" signature="142:528" ph="{...}" />
@@ -48,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/NetWorkTransform.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="45">
               <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <marker date="1573819577264" expanded="false" signature="6:119" ph="..." />
@@ -63,10 +62,53 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+              <folding>
+                <marker date="1574047709233" expanded="true" signature="6:315" ph="..." />
+                <marker date="1574047709233" expanded="true" signature="361:4090" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="687:840" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="752:808" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="874:967" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="911:961" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="993:1055" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1176:1243" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1324:1394" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1490:1738" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1517:1622" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1635:1732" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1814:1878" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1968:2204" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="1995:2094" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2107:2198" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2250:2289" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2323:2352" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2387:2417" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2463:2498" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2528:2558" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2584:2653" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2711:2747" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2806:2861" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="2909:3065" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3104:3187" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3227:3294" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3344:3406" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3446:3511" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3539:3798" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="3828:4088" ph="{...}" />
+                <marker date="1574047709233" expanded="true" signature="4092:4295" ph="/* this.RPC(&quot;メソッド名&quot;); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="120">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <marker date="1573819577263" expanded="false" signature="6:78" ph="..." />
@@ -77,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="15">
               <caret line="6" column="33" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="33" />
               <folding>
                 <marker date="1573819577267" expanded="true" signature="6:119" ph="..." />
@@ -97,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="120">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
@@ -113,7 +155,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="390">
               <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <marker date="1574046124428" expanded="false" signature="6:141" ph="..." />
@@ -134,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="7650">
               <caret line="538" selection-start-line="538" selection-end-line="538" />
               <folding>
                 <marker date="1573819503725" expanded="true" signature="0:449" ph="/* PhotonNetwork is the central class of the PUN package. ... */" />
@@ -491,7 +533,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="330">
               <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <marker date="1573819503728" expanded="true" signature="0:418" ph="/* Contains the PhotonView class. ... */" />
@@ -659,20 +701,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-        <option name="show-project-names" value="true" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -737,12 +769,13 @@
       <workItem from="1573667756448" duration="5908000" />
       <workItem from="1573725211973" duration="11698000" />
       <workItem from="1573881301611" duration="184000" />
-      <workItem from="1574038504191" duration="6238000" />
+      <workItem from="1574038504191" duration="6666000" />
+      <workItem from="1574066441200" duration="639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49637000" />
+    <option name="totallyTimeSpent" value="50704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1686,16 +1719,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="165">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1574044670931" expanded="false" signature="6:136" ph="..." />
+            <marker date="1574044670931" expanded="true" signature="179:389" ph="{...}" />
+            <marker date="1574044670931" expanded="true" signature="206:280" ph="{...}" />
+            <marker date="1574044670931" expanded="true" signature="315:387" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/NetWorkTransform.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="45">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
             <marker date="1573819577264" expanded="false" signature="6:119" ph="..." />
@@ -1711,7 +1751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="120">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <marker date="1573819577263" expanded="false" signature="6:78" ph="..." />
@@ -1721,37 +1761,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="15">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="33" />
           <folding>
-            <marker date="1574044670931" expanded="false" signature="6:136" ph="..." />
-            <marker date="1574044670931" expanded="true" signature="179:389" ph="{...}" />
-            <marker date="1574044670931" expanded="true" signature="206:280" ph="{...}" />
-            <marker date="1574044670931" expanded="true" signature="315:387" ph="{...}" />
+            <marker date="1573819577267" expanded="true" signature="6:119" ph="..." />
+            <marker date="1573819577267" expanded="true" signature="170:724" ph="{...}" />
+            <marker date="1573819577267" expanded="true" signature="277:338" ph="{...}" />
+            <marker date="1573819577267" expanded="true" signature="396:502" ph="{...}" />
+            <marker date="1573819577267" expanded="true" signature="447:496" ph="{...}" />
+            <marker date="1573819577267" expanded="true" signature="534:722" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/SendMessageCtoM.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="120">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <marker date="1574044670952" expanded="false" signature="6:96" ph="..." />
-            <marker date="1574044670952" expanded="true" signature="142:528" ph="{...}" />
-            <marker date="1574044670952" expanded="true" signature="172:237" ph="{...}" />
-            <marker date="1574044670952" expanded="true" signature="266:332" ph="{...}" />
-            <marker date="1574044670952" expanded="true" signature="361:431" ph="{...}" />
-            <marker date="1574044670952" expanded="true" signature="460:526" ph="{...}" />
+            <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
+            <marker date="1573876409055" expanded="true" signature="162:548" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="234:256" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="314:335" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="372:546" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <marker date="1574046124428" expanded="false" signature="6:141" ph="..." />
+            <marker date="1574046124428" expanded="true" signature="201:1263" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="333:391" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="422:1086" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="456:744" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="757:815" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="840:1080" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="896:1002" ph="/* string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId; ... */" />
+            <marker date="1574046124428" expanded="true" signature="1138:1181" ph="{...}" />
+            <marker date="1574046124428" expanded="true" signature="1222:1261" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="7650">
           <caret line="538" selection-start-line="538" selection-end-line="538" />
           <folding>
             <marker date="1573819503725" expanded="true" signature="0:449" ph="/* PhotonNetwork is the central class of the PUN package. ... */" />
@@ -2106,7 +2166,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="330">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <marker date="1573819503728" expanded="true" signature="0:418" ph="/* Contains the PhotonView class. ... */" />
@@ -2189,91 +2249,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/SendMessageCtoM.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state relative-caret-position="315">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <marker date="1574046124428" expanded="false" signature="6:141" ph="..." />
-            <marker date="1574046124428" expanded="true" signature="201:1263" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="333:391" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="422:1086" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="456:744" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="757:815" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="840:1080" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="896:1002" ph="/* string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId; ... */" />
-            <marker date="1574046124428" expanded="true" signature="1138:1181" ph="{...}" />
-            <marker date="1574046124428" expanded="true" signature="1222:1261" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
-            <marker date="1573876409055" expanded="true" signature="162:548" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="234:256" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="314:335" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="372:546" ph="{...}" />
+            <marker date="1574044670952" expanded="false" signature="6:96" ph="..." />
+            <marker date="1574044670952" expanded="true" signature="142:528" ph="{...}" />
+            <marker date="1574044670952" expanded="true" signature="172:237" ph="{...}" />
+            <marker date="1574044670952" expanded="true" signature="266:332" ph="{...}" />
+            <marker date="1574044670952" expanded="true" signature="361:431" ph="{...}" />
+            <marker date="1574044670952" expanded="true" signature="460:526" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1725">
-          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        <state relative-caret-position="-171">
+          <caret line="146" column="5" lean-forward="true" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
           <folding>
-            <marker date="1574047158204" expanded="true" signature="6:315" ph="..." />
-            <marker date="1574047158204" expanded="true" signature="361:4059" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="687:840" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="752:808" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="874:967" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="911:961" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="993:1055" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1176:1243" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1324:1394" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1490:1738" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1517:1622" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1635:1732" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1814:1878" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1968:2204" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="1995:2094" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2107:2198" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2250:2289" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2323:2352" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2387:2417" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2463:2498" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2528:2558" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2584:2653" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2711:2747" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2806:2861" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="2909:3065" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3104:3187" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3227:3294" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3344:3406" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3446:3511" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3539:3798" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="3828:4057" ph="{...}" />
-            <marker date="1574047158204" expanded="true" signature="4061:4264" ph="/* this.RPC(&quot;メソッド名&quot;); ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <marker date="1573819577267" expanded="true" signature="6:119" ph="..." />
-            <marker date="1573819577267" expanded="true" signature="170:724" ph="{...}" />
-            <marker date="1573819577267" expanded="true" signature="277:338" ph="{...}" />
-            <marker date="1573819577267" expanded="true" signature="396:502" ph="{...}" />
-            <marker date="1573819577267" expanded="true" signature="447:496" ph="{...}" />
-            <marker date="1573819577267" expanded="true" signature="534:722" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="6:315" ph="..." />
+            <marker date="1574047709233" expanded="true" signature="361:4090" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="687:840" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="752:808" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="874:967" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="911:961" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="993:1055" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1176:1243" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1324:1394" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1490:1738" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1517:1622" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1635:1732" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1814:1878" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1968:2204" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="1995:2094" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2107:2198" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2250:2289" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2323:2352" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2387:2417" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2463:2498" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2528:2558" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2584:2653" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2711:2747" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2806:2861" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="2909:3065" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3104:3187" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3227:3294" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3344:3406" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3446:3511" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3539:3798" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="3828:4088" ph="{...}" />
+            <marker date="1574047709233" expanded="true" signature="4092:4295" ph="/* this.RPC(&quot;メソッド名&quot;); ... */" />
           </folding>
         </state>
       </provider>
