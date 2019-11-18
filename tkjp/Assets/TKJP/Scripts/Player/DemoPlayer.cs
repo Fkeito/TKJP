@@ -15,12 +15,8 @@ namespace TKJP.Player
             State state = Manager.GetCurrentState();
             OnSwitchedState(state);
             preState = state;
-        }
-        void Update()
-        {
-            State state = Manager.GetCurrentState();
-            if (state != preState) OnSwitchedState(state);
-            preState = state;
+
+            Manager.AddListenerOnChangeState((s) => OnSwitchedState(s));
         }
 
         void OnSwitchedState(State state)

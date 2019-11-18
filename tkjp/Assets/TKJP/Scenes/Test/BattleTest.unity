@@ -1279,7 +1279,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1663919412}
-        m_MethodName: SetHand
+        m_MethodName: SetJankenHand
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2217,7 +2217,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1663919412}
-        m_MethodName: SetHand
+        m_MethodName: SetJankenHand
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2579,11 +2579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6298714375a44dd8ba3328825db65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTimeFinished:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1735854859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3216,7 +3211,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1663919412}
-        m_MethodName: SetHand
+        m_MethodName: SetJankenHand
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
