@@ -136,7 +136,7 @@ public class PhotonRpcCaller : MonoBehaviour
 
     public void SendBattleParameter(float value)
     {
-        this.RPCToOthers("CallValueDebug","value");
+        this.RPCToOthers("CallValueDebug",value);
     }
 
     public void SendMessageforResult()
