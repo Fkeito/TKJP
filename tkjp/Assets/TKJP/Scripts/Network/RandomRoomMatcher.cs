@@ -33,8 +33,8 @@ public class RandomRoomMatcher : MonoBehaviourPunCallbacks
         if (isRoomJoin)
         {
             tex.text = "接続したよー";
-            string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId;
-            Debug.Log(otherplayerId);
+            //string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId;
+            //Debug.Log(otherplayerId);
             int myplayerId = PhotonNetwork.LocalPlayer.ActorNumber;
         }
     }

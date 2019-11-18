@@ -35,5 +35,7 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - CallDebug
+  - CallStringDebug
+  - CallValueDebug
   DisableAutoOpenWizard: 1
   ShowSettings: 1
