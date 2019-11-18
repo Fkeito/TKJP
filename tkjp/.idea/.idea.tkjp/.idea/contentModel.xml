@@ -1204,6 +1204,7 @@
               <e p="TestNetWork.cs" t="Include" />
               <e p="TestNetWorkforClient.cs" t="Include" />
               <e p="TestScript.cs" t="Include" />
+              <e p="TransferCube.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="Attacker.cs" t="Include" />
