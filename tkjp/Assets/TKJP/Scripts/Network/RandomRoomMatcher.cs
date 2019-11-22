@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class RandomRoomMatcher : MonoBehaviourPunCallbacks
 {
     private bool isRoomMakeable = false;
+    private bool isRoomJoin = false;
+    public Text tex;
     public void ConnectStart()
     {
         PhotonNetwork.ConnectUsingSettings();
@@ -16,6 +19,8 @@ public class RandomRoomMatcher : MonoBehaviourPunCallbacks
     {
         if (isRoomMakeable)
         {
+            Photon.Realtime.Player player = PhotonNetwork.LocalPlayer;
+            Debug.Log(player.UserId);
             PhotonNetwork.JoinOrCreateRoom("room", new RoomOptions(), TypedLobby.Default);
             Debug.Log("マッチ成功");
             isRoomMakeable = false;
@@ -24,10 +29,23 @@ public class RandomRoomMatcher : MonoBehaviourPunCallbacks
         {
             Debug.Log("----------"); 
         }
+
+        if (isRoomJoin)
+        {
+            tex.text = "接続したよー";
+            //string otherplayerId = PhotonNetwork.PlayerListOthers[0].UserId;
+            //Debug.Log(otherplayerId);
+            int myplayerId = PhotonNetwork.LocalPlayer.ActorNumber;
+        }
     }
     
     public override void OnConnectedToMaster()
     {
         isRoomMakeable = true;
+    }
+
+    public override void OnJoinedRoom()
+    {
+        isRoomJoin = true;
     }
 }
