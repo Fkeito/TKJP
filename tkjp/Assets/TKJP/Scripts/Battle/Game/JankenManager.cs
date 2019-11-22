@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TKJP.Battle.State;
-
+using Photon;
+using Photon.Pun;
+using Photon.Realtime;
 namespace TKJP.Battle.Game
 {
     public class JankenManager : MonoBehaviour, IState
@@ -14,6 +16,8 @@ namespace TKJP.Battle.Game
         private JankenHand clientHand = JankenHand.None;
 
         private bool isDraw;
+
+        private PhotonView _photonview;
 
         //public TimeEvent onTimeChanged;
         //public UnityEvent onTimeFinished;
@@ -35,6 +39,12 @@ namespace TKJP.Battle.Game
             isDraw = false;
 
             battle = Manager.GetState<BattleManager>();
+
+            _photonview = GetComponent<PhotonView>();
+            if(_photonview == null)
+            {
+                _photonview = gameObject.AddComponent<PhotonView>();
+            }
         }
 
         public void OnChanged()
@@ -78,13 +88,31 @@ namespace TKJP.Battle.Game
         public void NextTo()
         {
             Manager.NextTo(isDraw ? State.State.Janken : State.State.Battle);
+            if (PhotonNetwork.IsMasterClient)
+            {
+                _photonview.RPC("ClientNextTo", RpcTarget.Others);
+            }
         }
+        [PunRPC]
+        public void ClientNextTo()
+        {
+            NextTo();
+        } 
 
         public void SetJankenHand(int i)
         {
-            masterHand = (JankenHand)i;
-            Debug.Log("master hand is " + i);
+            if (PhotonNetwork.IsMasterClient)
+            {
+                masterHand = (JankenHand)i;
+                Debug.Log("master hand is " + i);
+            }
+            else
+            {
+                _photonview.RPC("SetClientJankenHand",RpcTarget.MasterClient,i);
+            }
         }
+
+        [PunRPC]
         public void SetClientJankenHand(int i)
         {
             clientHand = (JankenHand)i;
