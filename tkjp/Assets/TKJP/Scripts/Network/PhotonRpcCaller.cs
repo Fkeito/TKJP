@@ -16,10 +16,10 @@ public class PhotonRpcCaller : MonoBehaviour
     public static PhotonRpcCaller Singleton;
     private PhotonView _PhotonView;
     public event Action <string> CreateAction = null;
-    public event Action Ready = null;
-    public event Action Janken = null;
-    public event Action <float> Battle = null;
-    public event Action Result = null;
+//    public event Action Ready = null;
+//    public event Action Janken = null;
+//    public event Action <float> Battle = null;
+//    public event Action Result = null;
 
     private void Awake()
     {
@@ -89,18 +89,18 @@ public class PhotonRpcCaller : MonoBehaviour
     }
     public void CallReadyAction()
     {
-        Ready();
+        this.RPCToOthers("CallStringDebug","SendMessageforReady準備完了");
     }
     public void CallJankenAction()
     {
-        Janken();
+        this.RPCToOthers("CallStringDebug","グーチョキパー");
     }
     public void CallBattleAction(float value)
     {
-        Battle(value);
+        this.RPCToOthers("CallValueDebug",value);
     }public void CallResultAction()
     {
-        Result();
+        this.RPCToOthers("CallStringDebug","結果を送信");
     }
     public void CallRpc()
     {
@@ -124,43 +124,43 @@ public class PhotonRpcCaller : MonoBehaviour
         PhotonNetwork.Instantiate(prefabId, v, Quaternion.identity);
     }
 
-    public void SendMessageforReady()
-    {
-        this.RPCToOthers("CallStringDebug","SendMessageforReady準備完了");
-    }
+//    public void SendMessageforReady()
+//    {
+//        this.RPCToOthers("CallStringDebug","SendMessageforReady準備完了");
+//    }
 
-    public void SendCommandforJanken()
-    {
-        this.RPCToOthers("CallStringDebug","グーチョキパー");
-    }
+//    public void SendCommandforJanken()
+//    {
+//        
+//    }
 
-    public void SendBattleParameter(float value)
-    {
-        this.RPCToOthers("CallValueDebug",value);
-    }
+//    public void SendBattleParameter(float value)
+//    {
+//        this.RPCToOthers("CallValueDebug",value);
+//    }
 
-    public void SendMessageforResult()
-    {
-        this.RPCToOthers("CallStringDebug","結果を送信");
-    }
+//    public void SendMessageforResult()
+//    {
+//        this.RPCToOthers("CallStringDebug","結果を送信");
+//    }
     private void OnEnable()
     {
-        //呼び出したいメソッドをEventに代入
+//        //呼び出したいメソッドをEventに代入
         this.CreateAction += CreateObj;
-        this.Ready += SendMessageforReady;
-        this.Janken += SendCommandforJanken;
-        this.Battle += SendBattleParameter;
-        this.Result += SendMessageforResult;
+//        this.Ready += SendMessageforReady;
+//        this.Janken += SendCommandforJanken;
+//        this.Battle += SendBattleParameter;
+//        this.Result += SendMessageforResult;
     }
 
     private void OnDisable()
     {
-        //消したいメソッドをEventから抜き出す
+//        //消したいメソッドをEventから抜き出す
         this.CreateAction -= CreateObj;
-        this.Ready += SendMessageforReady;
-        this.Janken += SendCommandforJanken;
-        this.Battle += SendBattleParameter;
-        this.Result += SendMessageforResult;
+//        this.Ready -= SendMessageforReady;
+//        this.Janken -= SendCommandforJanken;
+//        this.Battle -= SendBattleParameter;
+//        this.Result -= SendMessageforResult;
     }
 }
 
