@@ -40,18 +40,28 @@ namespace TKJP.Battle.Game
 
         public void MasterGetReady()
         {
-            masterIsReady = true;
+            StartCoroutine(DelayMethod(1.5f, () => {
+                masterIsReady = true;
+            }));
             Debug.Log("master is ready!");
         }
         public void ClientGetReady()
         {
-            clientIsReady = true;
+            StartCoroutine(DelayMethod(1.5f, () => {
+                clientIsReady = true;
+            }));
             Debug.Log("client is ready");
         }
 
         public void BackMenu()
         {
             transition.Load();
+        }
+
+        private IEnumerator DelayMethod(float delayTime, System.Action action)
+        {
+            yield return new WaitForSeconds(delayTime);
+            action();
         }
     }
 }

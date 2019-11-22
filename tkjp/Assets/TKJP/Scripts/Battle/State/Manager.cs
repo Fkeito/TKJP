@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TKJP.Battle.Game;
 
 namespace TKJP.Battle.State
@@ -18,6 +19,9 @@ namespace TKJP.Battle.State
         public BattleManager battle;
         public ResultManager result;
         private GameObject[] views;
+
+        public class StateEvent : UnityEvent<State> { }
+        public StateEvent onChangeState = new StateEvent();
 
         void Awake()
         {
@@ -90,6 +94,10 @@ namespace TKJP.Battle.State
             }
         }
 
+        public static void AddListenerOnChangeState(UnityAction<State> action)
+        {
+            if (instance) instance.onChangeState.AddListener(action);
+        }
         public static void NextTo(State state)
         {
             if (instance)
@@ -101,6 +109,8 @@ namespace TKJP.Battle.State
                     view.SetActive(false);
                 }
                 instance.views[(int)state].SetActive(true);
+
+                instance.onChangeState.Invoke(state);
             }
         }
     }
