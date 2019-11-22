@@ -16,11 +16,18 @@ namespace TKJP.UI
         private ITKJPGrab grab;
 
         public TKJPController.HandType handType;
+        private bool isEditor;
+
+        private void Start()
+        {
+            isEditor = Common.Settings.device == Common.Settings.Device.Editor;
+        }
 
         private void Update()
         {
             float _prev = prevFlex;
-            prevFlex = OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger);
+            if (isEditor) prevFlex = Input.GetMouseButton(0) ? 1f : 0f;
+            else prevFlex = OVRInput.Get(handType == TKJPController.HandType.Right ? OVRInput.Axis1D.SecondaryHandTrigger : OVRInput.Axis1D.PrimaryHandTrigger);
             CheckForGrabOrRelease(_prev);
         }
 
