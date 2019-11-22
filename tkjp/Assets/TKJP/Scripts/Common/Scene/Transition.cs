@@ -46,6 +46,13 @@ namespace TKJP.Common.Scene
                 loaded = true;
             }
         }
+        public void Load(string sceneName)
+        {
+            if (loaded) return;
+
+            SceneManager.LoadScene(sceneName);
+            loaded = true;
+        }
 
 
         private void Start()

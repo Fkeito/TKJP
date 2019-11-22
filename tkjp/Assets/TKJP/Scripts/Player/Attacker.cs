@@ -20,10 +20,10 @@ namespace TKJP.Player
             TimerDisposable?.Dispose();
             IsDelay = false;
         }
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
             if (IsDelay) return;
-            var attackable = collision.collider.GetComponent<IAttackable>();
+            var attackable = other.GetComponent<IAttackable>();
             if (attackable == null) return;
             Attack(attackable);
         }

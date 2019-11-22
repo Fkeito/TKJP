@@ -10,6 +10,10 @@ namespace TKJP.Battle.GrabbableObjects.Attack
             base.GrabBegin(hand, grabPoint);
             AddAttacker<SwordAttacker>()
                 .SetProperty(5,new AttackState(20));
+        }public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
+        {
+            base.GrabEnd(linearVelocity,angularVelocity);
+            RemoveComponent<SwordAttacker>();
         }
     }
 }
