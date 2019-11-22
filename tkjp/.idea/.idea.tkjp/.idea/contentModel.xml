@@ -1146,6 +1146,13 @@
         <e p="TKJP" t="Include">
           <e p="Scripts" t="Include">
             <e p="Battle" t="Include">
+              <e p="Game" t="Include">
+                <e p="BattleManager.cs" t="Include" />
+                <e p="JankenManager.cs" t="Include" />
+                <e p="ReadyManager.cs" t="Include" />
+                <e p="ResultManager.cs" t="Include" />
+                <e p="WeaponManager.cs" t="Include" />
+              </e>
               <e p="GrabbableObjects" t="Include">
                 <e p="Attack" t="Include">
                   <e p="Sword.cs" t="Include" />
@@ -1163,6 +1170,14 @@
                   </e>
                 </e>
               </e>
+              <e p="State" t="Include">
+                <e p="BattleState.cs" t="Include" />
+                <e p="IState.cs" t="Include" />
+                <e p="JankenState.cs" t="Include" />
+                <e p="Manager.cs" t="Include" />
+                <e p="ReadyState.cs" t="Include" />
+                <e p="ResultState.cs" t="Include" />
+              </e>
             </e>
             <e p="Common" t="Include">
               <e p="Container" t="Include">
@@ -1176,6 +1191,9 @@
               </e>
               <e p="Settings.cs" t="Include" />
             </e>
+            <e p="Editor" t="Include">
+              <e p="StartSceneFromSettings.cs" t="Include" />
+            </e>
             <e p="Feature" t="Include">
               <e p="Attack" t="Include">
                 <e p="AttackResult.cs" t="Include" />
@@ -1185,6 +1203,7 @@
               </e>
               <e p="Hp" t="Include">
                 <e p="HpAgent.cs" t="Include" />
+                <e p="HpHolder.cs" t="Include" />
                 <e p="IHpHolder.cs" t="Include" />
               </e>
               <e p="Result" t="Include">
@@ -1193,6 +1212,7 @@
               </e>
               <e p="Weapon" t="Include">
                 <e p="DemoWeapon.cs" t="Include" />
+                <e p="IDelatable.cs" t="Include" />
               </e>
             </e>
             <e p="Network" t="Include">
@@ -1212,14 +1232,21 @@
               <e p="AttackGrabbable.cs" t="Include" />
               <e p="DefenceAttackable.cs" t="Include" />
               <e p="DefenceGrabbable.cs" t="Include" />
+              <e p="DemoPlayer.cs" t="Include" />
               <e p="TKJPController.cs" t="Include" />
               <e p="TKJPGoController.cs" t="Include" />
               <e p="TKJPGrabbable.cs" t="Include" />
               <e p="TKJPGrabber.cs" t="Include" />
             </e>
+            <e p="ScarecrowController.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="ButtonTest.cs" t="Include" />
+              <e p="HPBar.cs" t="Include" />
               <e p="ITKJPUI.cs" t="Include" />
+              <e p="OKButton.cs" t="Include" />
+              <e p="Test" t="Include">
+                <e p="HPBarTest.cs" t="Include" />
+              </e>
               <e p="TKJPButton.cs" t="Include" />
               <e p="TKJPUI.cs" t="Include" />
               <e p="TKJPUIHand.cs" t="Include" />

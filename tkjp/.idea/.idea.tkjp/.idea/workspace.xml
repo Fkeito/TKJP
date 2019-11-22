@@ -14,21 +14,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <marker date="1574044670931" expanded="false" signature="6:136" ph="..." />
-                <marker date="1574044670931" expanded="true" signature="179:389" ph="{...}" />
-                <marker date="1574044670931" expanded="true" signature="206:280" ph="{...}" />
-                <marker date="1574044670931" expanded="true" signature="315:387" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/SendMessageCtoM.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -63,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <marker date="1574411772665" expanded="false" signature="6:315" ph="..." />
                 <marker date="1574411772665" expanded="true" signature="361:4257" ph="{...}" />
@@ -107,40 +92,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <marker date="1573819577263" expanded="false" signature="6:78" ph="..." />
-                <marker date="1573819577263" expanded="true" signature="119:340" ph="{...}" />
-                <marker date="1573819577263" expanded="true" signature="147:338" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="33" />
-              <folding>
-                <marker date="1573819577267" expanded="true" signature="6:119" ph="..." />
-                <marker date="1573819577267" expanded="true" signature="170:724" ph="{...}" />
-                <marker date="1573819577267" expanded="true" signature="277:338" ph="{...}" />
-                <marker date="1573819577267" expanded="true" signature="396:502" ph="{...}" />
-                <marker date="1573819577267" expanded="true" signature="447:496" ph="{...}" />
-                <marker date="1573819577267" expanded="true" signature="534:722" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="150">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
@@ -154,9 +108,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/BattleState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1574412671357" expanded="false" signature="6:78" ph="..." />
+                <marker date="1574412671357" expanded="true" signature="107:987" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="147:985" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="322:470" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="503:546" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="578:674" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="706:777" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="807:896" ph="{...}" />
+                <marker date="1574412671357" expanded="true" signature="929:979" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/Manager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+              <folding>
+                <marker date="1574412671359" expanded="false" signature="6:102" ph="..." />
+                <marker date="1574412671359" expanded="true" signature="131:3120" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="174:3005" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="538:1044" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1066:1231" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1256:1370" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1299:1360" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1407:1629" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1675:1728" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1789:2024" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1856:1988" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="1901:1974" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="2082:2581" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="2119:2571" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="2629:2999" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="2665:2989" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="2836:2915" ph="{...}" />
+                <marker date="1574412671359" expanded="true" signature="3028:3118" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/IState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1574412671358" expanded="true" signature="54:276" ph="{...}" />
+                <marker date="1574412671358" expanded="true" signature="84:222" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="345">
               <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <marker date="1574046124428" expanded="false" signature="6:141" ph="..." />
@@ -177,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7650">
+            <state relative-caret-position="7425">
               <caret line="538" selection-start-line="538" selection-end-line="538" />
               <folding>
                 <marker date="1573819503725" expanded="true" signature="0:449" ph="/* PhotonNetwork is the central class of the PUN package. ... */" />
@@ -534,7 +548,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="315">
               <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <marker date="1573819503728" expanded="true" signature="0:418" ph="/* Contains the PhotonView class. ... */" />
@@ -640,28 +654,31 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4836C8E1-98A5-4436-9A81-EECD4FE63491/02/a7b7241d/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/BattleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/IState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MatchGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Player/TKJPController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/NetWorkTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4836C8E1-98A5-4436-9A81-EECD4FE63491/f6/27ec130a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/SendMessageCtoM.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MatchGameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Common/Debug.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/CreatePrefab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PunClasses.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonRealtime/Code/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Player/TKJPController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonTransformView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4836C8E1-98A5-4436-9A81-EECD4FE63491/a7/0dc81056/LogType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/NetWorkTransform.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -771,12 +788,12 @@
       <workItem from="1573881301611" duration="184000" />
       <workItem from="1574038504191" duration="6666000" />
       <workItem from="1574066441200" duration="639000" />
-      <workItem from="1574408271866" duration="2924000" />
+      <workItem from="1574408271866" duration="3982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53628000" />
+    <option name="totallyTimeSpent" value="54686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1736,7 +1753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/MoveObject.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="90">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <marker date="1573819577263" expanded="false" signature="6:78" ph="..." />
@@ -1748,7 +1765,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TestNetWorkforClient.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state>
           <caret line="6" column="33" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="33" />
           <folding>
             <marker date="1573819577267" expanded="true" signature="6:119" ph="..." />
@@ -1761,23 +1778,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
-            <marker date="1573876409055" expanded="true" signature="162:548" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="234:256" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="314:335" ph="{...}" />
-            <marker date="1573876409055" expanded="true" signature="372:546" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/RandomRoomMatcher.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="345">
           <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
             <marker date="1574046124428" expanded="false" signature="6:141" ph="..." />
@@ -1796,7 +1799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonNetworkPart.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7650">
+        <state relative-caret-position="7425">
           <caret line="538" selection-start-line="538" selection-end-line="538" />
           <folding>
             <marker date="1573819503725" expanded="true" signature="0:449" ph="/* PhotonNetwork is the central class of the PUN package. ... */" />
@@ -2151,7 +2154,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PhotonView.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="315">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <marker date="1573819503728" expanded="true" signature="0:418" ph="/* Contains the PhotonView class. ... */" />
@@ -2268,7 +2271,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/PhotonRpcCaller.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <marker date="1574411772665" expanded="false" signature="6:315" ph="..." />
             <marker date="1574411772665" expanded="true" signature="361:4257" ph="{...}" />
@@ -2302,6 +2305,74 @@
             <marker date="1574411772665" expanded="true" signature="3985:4255" ph="{...}" />
             <marker date="1574411772665" expanded="true" signature="4065:4249" ph="/* this.Ready -= SendMessageforReady; ... */" />
             <marker date="1574411772665" expanded="true" signature="4259:4462" ph="/* this.RPC(&quot;メソッド名&quot;); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Network/TransferCube.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <marker date="1573876409055" expanded="false" signature="6:119" ph="..." />
+            <marker date="1573876409055" expanded="true" signature="162:548" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="234:256" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="314:335" ph="{...}" />
+            <marker date="1573876409055" expanded="true" signature="372:546" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/IState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1574412671358" expanded="true" signature="54:276" ph="{...}" />
+            <marker date="1574412671358" expanded="true" signature="84:222" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/BattleState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1574412671357" expanded="false" signature="6:78" ph="..." />
+            <marker date="1574412671357" expanded="true" signature="107:987" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="147:985" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="322:470" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="503:546" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="578:674" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="706:777" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="807:896" ph="{...}" />
+            <marker date="1574412671357" expanded="true" signature="929:979" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TKJP/Scripts/Battle/State/Manager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <marker date="1574412671359" expanded="false" signature="6:102" ph="..." />
+            <marker date="1574412671359" expanded="true" signature="131:3120" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="174:3005" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="538:1044" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1066:1231" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1256:1370" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1299:1360" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1407:1629" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1675:1728" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1789:2024" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1856:1988" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="1901:1974" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="2082:2581" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="2119:2571" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="2629:2999" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="2665:2989" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="2836:2915" ph="{...}" />
+            <marker date="1574412671359" expanded="true" signature="3028:3118" ph="{...}" />
           </folding>
         </state>
       </provider>
