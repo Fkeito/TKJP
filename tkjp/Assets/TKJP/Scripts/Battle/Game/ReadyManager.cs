@@ -10,7 +10,6 @@ namespace TKJP.Battle.Game
     public class ReadyManager : MonoBehaviour, IState
     {
         public Transition transition;
-
         private bool masterIsReady;
         private bool clientIsReady;
         private PhotonView _photonView;
@@ -23,6 +22,16 @@ namespace TKJP.Battle.Game
             {
                 _photonView = gameObject.AddComponent<PhotonView>();
             }
+
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.Instantiate("TKJPPlayer", Vector3.back * 1.5f, Quaternion.identity);
+            }
+            else
+            {
+                PhotonNetwork.Instantiate("TKJPPlayer", Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
+            }
+            
         }
 
         public void OnChanged()

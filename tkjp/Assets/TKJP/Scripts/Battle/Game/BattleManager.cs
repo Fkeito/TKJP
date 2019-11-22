@@ -7,6 +7,7 @@ using TKJP.Player;
 using TKJP.Battle.State;
 using TKJP.Feature.Hp;
 using Photon.Pun;
+using TKJP.Common.Container;
 namespace TKJP.Battle.Game
 {
     public class BattleManager : MonoBehaviour, IState
@@ -14,8 +15,7 @@ namespace TKJP.Battle.Game
         private ResultManager result;
         private TKJPGrabber.GrabType grabType;
 
-        public TKJPPlayer MyPlayer;
-        private int EnemyPlayerHp;
+        private TKJPPlayer MyPlayer;
         public GameObject[] weapons;
         private WeaponManager weaponManager;
 
@@ -41,6 +41,7 @@ namespace TKJP.Battle.Game
 
             //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
+            MyPlayer = SceneContainer.ContextObj<TKJPPlayer>();
             HpDisposable?.Dispose();
             HpDisposable = MyPlayer
                 .GetHp()
@@ -56,10 +57,9 @@ namespace TKJP.Battle.Game
             }
         }
         [PunRPC]
-        private void SetEnemyHp(int hp)
+        private void SetEnemyHp(int enemyHp)
         {
-            EnemyPlayerHp = hp;
-            if (hp <= 0) BeSettled(Result.Win);
+            if (enemyHp <= 0) BeSettled(Result.Win);
         }
 
         public void OnChanged()

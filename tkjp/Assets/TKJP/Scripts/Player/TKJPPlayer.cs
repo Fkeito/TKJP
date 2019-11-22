@@ -7,10 +7,11 @@ namespace TKJP.Player
 {
     public class TKJPPlayer : MonoBehaviour
     {
-        private HpHolder Hp;
+        private readonly HpHolder Hp = new HpHolder(100);
         private void Awake()
         {
-            SceneContainer.Instance.Bind(new HpAgent(Hp));
+            SceneContainer.BindConextObj(new HpAgent(Hp));
+            SceneContainer.BindConextObj(this);
         }
         public IReadOnlyHpHolder GetHp()
         {
