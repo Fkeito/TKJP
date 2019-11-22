@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using TKJP.Player;
 using TKJP.Battle.State;
 using TKJP.Feature.Hp;
-
+using Photon.Pun;
+using TKJP.Common.Container;
 namespace TKJP.Battle.Game
 {
     public class BattleManager : MonoBehaviour, IState
@@ -13,9 +15,7 @@ namespace TKJP.Battle.Game
         private ResultManager result;
         private TKJPGrabber.GrabType grabType;
 
-        public ScarecrowController/*PlayerController*/ clientPlayer;
-        //public PlayerController masterPlayer;
-
+        private TKJPPlayer MyPlayer;
         public GameObject[] weapons;
         private WeaponManager weaponManager;
 
@@ -25,6 +25,8 @@ namespace TKJP.Battle.Game
         private float battleTime;
         private float time;
 
+        private PhotonView _photonview;
+        private IDisposable HpDisposable;
         public void Initialize()
         {
             onTimeChanged = new TimeEvent();
@@ -37,8 +39,27 @@ namespace TKJP.Battle.Game
             weaponManager = WeaponManager.Singleton;
             weaponManager.SetWeaponInfo(weapons);
 
-            clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
+            //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
+            MyPlayer = SceneContainer.ContextObj<TKJPPlayer>();
+            HpDisposable?.Dispose();
+            HpDisposable = MyPlayer
+                .GetHp()
+                .OnChangeHp
+                .Subscribe(value => {
+                    _photonview.RPC("SetEnemyHp", RpcTarget.Others, value);
+                    if (value <= 0) BeSettled(Result.Lose);
+                });
+            _photonview = GetComponent<PhotonView>();
+            if(_photonview == null)
+            {
+                _photonview = gameObject.AddComponent<PhotonView>();
+            }
+        }
+        [PunRPC]
+        private void SetEnemyHp(int enemyHp)
+        {
+            if (enemyHp <= 0) BeSettled(Result.Win);
         }
 
         public void OnChanged()
@@ -60,6 +81,15 @@ namespace TKJP.Battle.Game
         public void NextTo()
         {
             Manager.NextTo(isSettled ? State.State.Result : State.State.Janken);
+            if (PhotonNetwork.IsMasterClient)
+            {
+                _photonview.RPC("ClientNextTo", RpcTarget.Others);
+            }
+        }
+        [PunRPC]
+        private void ClientNextTo()
+        {
+            NextTo();
         }
 
         public void BeSettled()
@@ -105,6 +135,11 @@ namespace TKJP.Battle.Game
         {
             this.result?.SetResult(result);
             BeSettled();
+        }
+        public void OnDestroy()
+        {
+            HpDisposable?.Dispose();
+            HpDisposable = null;
         }
     }
 }

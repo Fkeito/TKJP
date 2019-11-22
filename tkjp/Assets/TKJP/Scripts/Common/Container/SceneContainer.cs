@@ -25,13 +25,27 @@ namespace TKJP.Common.Container
             SetInstance(this);
         }
 
+        public static void BindConextObj<T>(T obj)
+        {
+            if (Instance == null) return;
+            Instance.Bind(obj);
+        }
         public void Bind<T>(T obj)
         {
             ObjList.Add(typeof(T), obj);
         }
+        public static T ContextObj<T>() where T : class
+        {
+            return Instance?.GetContextObj<T>();
+        }
         public T GetContextObj<T>() where T : class
         {
-            return (T)ObjList[typeof(T)] ?? null;
+            var obj = (T)ObjList[typeof(T)] ?? null;
+            if(obj == null)
+            {
+                Debug.LogError(typeof(T).Name + "は、バインドされていません");
+            }
+            return obj;
         }
     }
 }
