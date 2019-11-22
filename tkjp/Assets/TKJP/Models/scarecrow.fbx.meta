@@ -3,24 +3,12 @@ guid: 5d2010a56145d485b824eccb5dcbf079
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Circle
-    100002: Plane
-    100004: //RootNode
-    100006: Sphere
-    400000: Circle
-    400002: Plane
-    400004: //RootNode
-    400006: Sphere
+    100000: //RootNode
+    400000: //RootNode
     2100000: No Name
-    2300000: Circle
-    2300002: Plane
-    2300004: Sphere
-    3300000: Circle
-    3300002: Plane
-    3300004: Sphere
-    4300000: Circle
-    4300002: Sphere
-    4300004: Plane
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Plane
   externalObjects: {}
   materials:
     importMaterials: 1
