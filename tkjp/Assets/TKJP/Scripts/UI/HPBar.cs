@@ -7,14 +7,15 @@ namespace TKJP.UI
 {
     public class HPBar : MonoBehaviour
     {
-        public Slider Slider;
+        public Image bar;
+        int maxValue;
         public void SetMaxValue(int maxValue)
         {
-            Slider.maxValue = maxValue;
+            this.maxValue = maxValue;
         }
         public void SetValue(int value)
         {
-            Slider.value = value;
+            bar.fillAmount = (float) value / maxValue;
         }
     }
 }
