@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UniRx;
 using System.Linq;
 using Photon.Pun;
@@ -6,36 +7,36 @@ using Photon.Realtime;
 using UnityEngine.SceneManagement;
 namespace TKJP.Network
 {
-    public class RoomMatchingManager : MonoBehaviourPunCallbacks
+    public class RoomMatchingManager : MonoBehaviour
     {
-        //public int PlayerFullCount = 2;
-        private bool isFull = false;
-        private void Awake()
+        private bool connect;
+        private bool room;
+        private void Start()
         {
+            Debug.Log("awake");
             PhotonNetwork.ConnectUsingSettings();
-        }
-        public override void OnConnectedToMaster()
-        {
-            base.OnJoinedLobby();
-            PhotonNetwork.JoinOrCreateRoom("room", new RoomOptions(), TypedLobby.Default);
-        }
-        public override void OnJoinedRoom()
-        {
-            base.OnJoinedRoom();
-            SceneManager.LoadScene("OnlineBattle", LoadSceneMode.Single);
-            /*
+            Observable
+                .Interval(TimeSpan.FromSeconds(5))
+                .Where(_ => PhotonNetwork.IsConnectedAndReady)
+                .Where(_ => !connect)
+                .Subscribe(_ => {
+                    PhotonNetwork.JoinOrCreateRoom("room", new RoomOptions(), TypedLobby.Default);
+                    Debug.Log("joinOrCreate");
+                })
+                .AddTo(gameObject);
             Observable
                 .EveryUpdate()
-                .Where(_ => !isFull)
+                .Where(_ => PhotonNetwork.InRoom)
+                .Where(_ => !room)
                 .Subscribe(_ =>
                 {
-                    if (PhotonNetwork.CurrentRoom.PlayerCount == PlayerFullCount)
-                    {
-                        SceneManager.LoadScene("OnlineBattle", LoadSceneMode.Single);
-                        isFull = true;
-                    }
+                    connect = true;
+                    Debug.Log("InRoom");
+                    SceneManager.LoadScene("OnlineBattle", LoadSceneMode.Single);
+                    room = true;
+
                 })
-                .AddTo(gameObject);*/
+                .AddTo(gameObject);
         }
     }
 }
