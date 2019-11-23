@@ -7,6 +7,7 @@ using TKJP.Player;
 using TKJP.Battle.State;
 using TKJP.Feature.Hp;
 using Photon.Pun;
+using Photon.Realtime;
 using TKJP.Common.Container;
 namespace TKJP.Battle.Game
 {
@@ -17,7 +18,7 @@ namespace TKJP.Battle.Game
 
         private TKJPPlayer MyPlayer;
         public ScarecrowController DebugEnemy;
-        public GameObject[] weapons;
+        private GameObject[] weapons;
         private WeaponManager weaponManager;
 
         public TimeEvent onTimeChanged;
@@ -40,8 +41,18 @@ namespace TKJP.Battle.Game
 
             result = Manager.GetState<ResultManager>();
 
+            var ids = new int[weapons.Length];
+            var weps = new GameObject[weapons.Length];
+            for(int i = 0; i <= weapons.Length; i++)
+            {
+                var obj = Instantiate(weapons[i]);
+                ids[i] = obj.GetComponent<PhotonView>().ViewID;
+                weps[i] = obj;
+            }
+            _photonview.RPC("SetEnemyHp",RpcTarget.Others,ids);
+            
             weaponManager = WeaponManager.Singleton;
-            weaponManager.SetWeaponInfo(weapons);
+            weaponManager.SetWeaponInfo(weps);
 
             //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
@@ -63,6 +74,14 @@ namespace TKJP.Battle.Game
             if (enemyHp <= 0) BeSettled(Result.Win);
         }
 
+        [PunRPC]
+        private void SetWeaponId(int[] ids)
+        {
+            for(int i = 0; i < weapons.Length; i++)
+            {
+                weapons[i].GetComponent<PhotonView>().ViewID = ids[i];
+            }
+        }
         public void OnChanged()
         {
             time = 0f;

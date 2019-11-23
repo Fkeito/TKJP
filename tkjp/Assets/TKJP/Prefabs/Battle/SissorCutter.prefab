@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 7375780855303938172}
   - component: {fileID: 4855947245711363235}
   - component: {fileID: 8493862103858961207}
+  - component: {fileID: 3919997228950949075}
   m_Layer: 0
   m_Name: SissorCutter
   m_TagString: Untagged
@@ -96,6 +97,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.1, z: 0.4}
   m_Center: {x: -0.09, y: 0, z: -0.05}
+--- !u!114 &3919997228950949075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966498348518619676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &8966498348324777101
 PrefabInstance:
   m_ObjectHideFlags: 0
