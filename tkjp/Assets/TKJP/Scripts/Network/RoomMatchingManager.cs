@@ -8,7 +8,7 @@ namespace TKJP.Network
 {
     public class RoomMatchingManager : MonoBehaviourPunCallbacks
     {
-        public int PlayerFullCount = 2;
+        //public int PlayerFullCount = 2;
         private bool isFull = false;
         private void Awake()
         {
@@ -22,6 +22,8 @@ namespace TKJP.Network
         public override void OnJoinedRoom()
         {
             base.OnJoinedRoom();
+            SceneManager.LoadScene("OnlineBattle", LoadSceneMode.Single);
+            /*
             Observable
                 .EveryUpdate()
                 .Where(_ => !isFull)
@@ -33,7 +35,7 @@ namespace TKJP.Network
                         isFull = true;
                     }
                 })
-                .AddTo(gameObject);
+                .AddTo(gameObject);*/
         }
     }
 }
