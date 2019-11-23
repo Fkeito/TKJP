@@ -16,6 +16,7 @@ namespace TKJP.Battle.Game
         private TKJPGrabber.GrabType grabType;
 
         private TKJPPlayer MyPlayer;
+        public ScarecrowController DebugEnemy;
         public GameObject[] weapons;
         private WeaponManager weaponManager;
 
