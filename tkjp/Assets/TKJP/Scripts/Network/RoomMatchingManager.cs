@@ -6,13 +6,22 @@ using Photon.Realtime;
 using UnityEngine.SceneManagement;
 namespace TKJP.Network
 {
-    public class RoomMatchingManager : MonoBehaviour
+    public class RoomMatchingManager : MonoBehaviourPunCallbacks
     {
         public int PlayerFullCount = 2;
         private bool isFull = false;
-        private void Start()
+        private void Awake()
         {
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        public override void OnConnectedToMaster()
+        {
+            base.OnJoinedLobby();
             PhotonNetwork.JoinOrCreateRoom("room", new RoomOptions(), TypedLobby.Default);
+        }
+        public override void OnJoinedRoom()
+        {
+            base.OnJoinedRoom();
             Observable
                 .EveryUpdate()
                 .Where(_ => !isFull)
