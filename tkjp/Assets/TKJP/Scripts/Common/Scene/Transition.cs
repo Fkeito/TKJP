@@ -33,6 +33,7 @@ namespace TKJP.Common.Scene
         public void Load()
         {
             if (loaded) return;
+            Debug.Log(loadSceneName);
             if (useAsync)
             {
                 if (async != null) SceneManager.LoadSceneAsync(loadSceneName);
@@ -50,6 +51,7 @@ namespace TKJP.Common.Scene
         {
             if (loaded) return;
 
+            Debug.Log(sceneName);
             SceneManager.LoadScene(sceneName);
             loaded = true;
         }

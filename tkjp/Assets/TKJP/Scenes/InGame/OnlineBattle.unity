@@ -1010,6 +1010,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1523499662}
+  playerPrefab: {fileID: 5515642750796746200, guid: 43b087a13da23445bb03693b071dfe00,
+    type: 3}
 --- !u!114 &638748313
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -28,6 +28,10 @@ namespace TKJP.Player
             SceneContainer.BindConextObj(this);
 
             view = GetComponent<PhotonView>();
+            PhotonNetwork.AllocateViewID(view);
+            PhotonNetwork.AllocateViewID(head);
+            PhotonNetwork.AllocateViewID(right);
+            PhotonNetwork.AllocateViewID(left);
 
             GetHp()
                 .OnChangeHp
@@ -44,9 +48,9 @@ namespace TKJP.Player
         }
         public void ViewSyncro()
         {
-            var headId = PhotonNetwork.AllocateViewID(head);
-            var rightId = PhotonNetwork.AllocateViewID(right);
-            var leftId = PhotonNetwork.AllocateViewID(left);
+            var headId = head.ViewID;
+            var rightId = right.ViewID;
+            var leftId = left.ViewID;
             GetComponent<PhotonView>().RPC("CreatreMeAsEnemy", RpcTarget.OthersBuffered, headId, rightId, leftId);
         }
 

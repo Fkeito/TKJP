@@ -4,11 +4,11 @@ using UniRx;
 using System.Linq;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.SceneManagement;
 namespace TKJP.Network
 {
     public class RoomMatchingManager : MonoBehaviour
     {
+        public TKJP.Common.Scene.Transition transition;
         private bool connect;
         private bool room;
         private void Start()
@@ -32,7 +32,7 @@ namespace TKJP.Network
                 {
                     connect = true;
                     Debug.Log("InRoom");
-                    SceneManager.LoadScene("OnlineBattle", LoadSceneMode.Single);
+                    transition.Load();
                     room = true;
 
                 })
