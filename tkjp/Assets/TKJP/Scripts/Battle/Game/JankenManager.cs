@@ -126,7 +126,7 @@ namespace TKJP.Battle.Game
         {
             int result = (masterHand - clientHand + 3) % 3;
             //Todo: 演出
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             Debug.Log("Jadge -> " + result);
             if (result != 0)
             {
