@@ -45,6 +45,11 @@ namespace TKJP.Battle.Game
 
             //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
+            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+            {
+                DebugEnemy?.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
+            }
+
             MyPlayer = SceneContainer.ContextObj<TKJPPlayer>();
             HpDisposable?.Dispose();
             HpDisposable = MyPlayer
