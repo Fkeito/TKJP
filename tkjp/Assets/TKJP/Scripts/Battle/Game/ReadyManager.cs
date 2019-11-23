@@ -68,6 +68,10 @@ namespace TKJP.Battle.Game
             //if (PhotonNetwork.IsMasterClient)
             {
                 masterIsReady = true;
+                if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+                {
+                    clientIsReady = true;
+                }
             }
             //else
             //{
