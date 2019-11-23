@@ -50,15 +50,7 @@ namespace TKJP.Battle.Game
                 DebugEnemy?.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             }
 
-            MyPlayer = SceneContainer.ContextObj<TKJPPlayer>();
-            HpDisposable?.Dispose();
-            HpDisposable = MyPlayer
-                .GetHp()
-                .OnChangeHp
-                .Subscribe(value => {
-                    _photonview.RPC("SetEnemyHp", RpcTarget.Others, value);
-                    if (value <= 0) BeSettled(Result.Lose);
-                });
+            
             _photonview = GetComponent<PhotonView>();
             if(_photonview == null)
             {
@@ -109,6 +101,15 @@ namespace TKJP.Battle.Game
         void OnEnable()
         {
             if (grabType == TKJPGrabber.GrabType.All) grabType = TKJPGrabber.GrabType.None;
+            MyPlayer = SceneContainer.ContextObj<TKJPPlayer>();
+            HpDisposable?.Dispose();
+            HpDisposable = MyPlayer
+                .GetHp()
+                .OnChangeHp
+                .Subscribe(value => {
+                    _photonview.RPC("SetEnemyHp", RpcTarget.Others, value);
+                    if (value <= 0) BeSettled(Result.Lose);
+                });
         }
 
         void OnDisable()
