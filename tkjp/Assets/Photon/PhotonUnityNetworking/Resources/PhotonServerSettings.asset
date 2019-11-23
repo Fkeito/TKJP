@@ -41,5 +41,8 @@ MonoBehaviour:
   - SetClientJankenHand
   - ClientNextTo
   - SetEnemyHp
+  - CreatreMeAsEnemy
+  - OnChangePlayerHp
+  - SetWeaponId
   DisableAutoOpenWizard: 1
   ShowSettings: 1

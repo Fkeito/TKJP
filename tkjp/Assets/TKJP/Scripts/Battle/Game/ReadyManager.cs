@@ -14,6 +14,7 @@ namespace TKJP.Battle.Game
         private bool masterIsReady;
         private bool clientIsReady;
         private PhotonView _photonView;
+        private GameObject a;
 
         public void Initialize()
         {
@@ -30,11 +31,11 @@ namespace TKJP.Battle.Game
             Initialize();
             if (PhotonNetwork.IsMasterClient)
             {
-                TKJPPlayer = Instantiate("TKJPPlayer", Vector3.back * 1.5f, Quaternion.identity);
+                TKJPPlayer = Instantiate(a, Vector3.back * 1.5f, Quaternion.identity);
             }
             else
             {
-                TKJPPlayer = Instantiate("TKJPPlayer", Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
+                TKJPPlayer = Instantiate(a, Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
             }
             TKJPPlayer.GetComponent<TKJPPlayer>().ViewSyncro();
         }

@@ -810,6 +810,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 6934446892579526892}
+  head: {fileID: 0}
+  right: {fileID: 0}
+  left: {fileID: 0}
+  EnemyPrefab: {fileID: 0}
 --- !u!114 &1993650725582593129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,7 +2010,7 @@ PrefabInstance:
     - target: {fileID: 2893040541989211460, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 850
+      value: 851
       objectReference: {fileID: 0}
     - target: {fileID: 2893040541989211460, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398,
         type: 3}
