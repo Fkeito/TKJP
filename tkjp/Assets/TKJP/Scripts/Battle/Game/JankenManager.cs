@@ -105,9 +105,12 @@ namespace TKJP.Battle.Game
             {
                 masterHand = (JankenHand)i;
                 Debug.Log("master hand is " + i);
-                if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+                if (Common.Settings.device == Common.Settings.Device.Editor)
                 {
-                    SetClientJankenHand(0);
+                    if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+                    {
+                        SetClientJankenHand(0);
+                    }
                 }
             }
             else
