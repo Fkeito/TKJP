@@ -23,14 +23,14 @@ namespace TKJP.Battle.Game
                 _photonView = gameObject.AddComponent<PhotonView>();
             }
 
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.Instantiate("TKJPPlayer", Vector3.back * 1.5f, Quaternion.identity);
-            }
-            else
-            {
-                PhotonNetwork.Instantiate("TKJPPlayer", Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
-            }
+            //if (PhotonNetwork.IsMasterClient)
+            //{
+            //    PhotonNetwork.Instantiate("TKJPPlayer", Vector3.back * 1.5f, Quaternion.identity);
+            //}
+            //else
+            //{
+            //    PhotonNetwork.Instantiate("TKJPPlayer", Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
+            //}
             
         }
 
@@ -52,10 +52,10 @@ namespace TKJP.Battle.Game
         public void NextTo()
         {
             Manager.NextTo(State.State.Janken);
-            if (PhotonNetwork.IsMasterClient)
-            {
-                _photonView.RPC("ClientNextTo",RpcTarget.Others);
-            }
+            //if (PhotonNetwork.IsMasterClient)
+            //{
+            //    _photonView.RPC("ClientNextTo",RpcTarget.Others);
+            //}
         }
         [PunRPC]
         private void ClientNextTo()
@@ -65,7 +65,7 @@ namespace TKJP.Battle.Game
 
         public void GetReady()
         {
-            if (PhotonNetwork.IsMasterClient)
+            //if (PhotonNetwork.IsMasterClient)
             {
                 masterIsReady = true;
                 if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
@@ -73,10 +73,10 @@ namespace TKJP.Battle.Game
                     clientIsReady = true;
                 }
             }
-            else
-            {
-                _photonView.RPC("ClientGetReady",RpcTarget.MasterClient);
-            }
+            //else
+            //{
+            //    _photonView.RPC("ClientGetReady",RpcTarget.MasterClient);
+            //}
         }
         [PunRPC]
         public void ClientGetReady()
