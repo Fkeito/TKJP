@@ -20,6 +20,7 @@ namespace TKJP.Battle.Game
         private WeaponManager weaponManager;
 
         public TimeEvent onTimeChanged;
+        public Timebar bar;
 
         private bool isSettled;
         private float battleTime;
@@ -30,6 +31,8 @@ namespace TKJP.Battle.Game
         public void Initialize()
         {
             onTimeChanged = new TimeEvent();
+            onTimeChanged.AddListener((time) => bar.onTimeChanged(time));
+
             isSettled = false;
             battleTime = 5f;
             time = 0f;
@@ -70,7 +73,7 @@ namespace TKJP.Battle.Game
         public void OnUpdate()
         {
             time += Time.deltaTime;
-            onTimeChanged.Invoke(time);
+            onTimeChanged.Invoke(time / battleTime);
         }
 
         public bool IsFinish()
