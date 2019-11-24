@@ -165,5 +165,10 @@ namespace TKJP.Player
                 }
             }
         }
+
+        public void Release()
+        {
+            ForceRelease(m_grabbedObj);
+        }
     }
 }

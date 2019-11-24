@@ -19,6 +19,9 @@ namespace TKJP.Player
         public PhotonView head, right, left;
         public GameObject EnemyPrefab;
 
+        public TKJPGrabber leftHand;
+        public TKJPGrabber rightHand;
+
         TKJPEnemy enemy;
 
         private void Awake()

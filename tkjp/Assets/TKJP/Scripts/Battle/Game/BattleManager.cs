@@ -128,6 +128,8 @@ namespace TKJP.Battle.Game
             foreach (GameObject weapon in weapons)
             {
                 weapon.SetActive(true);
+                WeaponManager.Singleton.ForceRelease();
+                weapon.transform.parent = this.transform;
                 Trs resetTrs = weaponManager?.GetFirstTrs(weapon) ?? new Trs(weapon.transform);
                 weapon.transform.position = resetTrs.position;
                 weapon.transform.rotation = resetTrs.rotation;

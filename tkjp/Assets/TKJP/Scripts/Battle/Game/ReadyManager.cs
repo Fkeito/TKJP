@@ -39,7 +39,9 @@ namespace TKJP.Battle.Game
                 var stateUIRoot = GameObject.Find("States");
                 stateUIRoot.transform.eulerAngles = stateUIRoot.transform.eulerAngles + Vector3.up * 180;
             }
-            TKJPPlayer.GetComponent<TKJPPlayer>().ViewSyncro();
+            TKJPPlayer tkjp = TKJPPlayer.GetComponent<TKJPPlayer>();
+            tkjp.ViewSyncro();
+            WeaponManager.Singleton.SetHand(tkjp.rightHand, tkjp.leftHand);
         }
 
         public void OnUpdate()

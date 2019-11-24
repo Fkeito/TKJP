@@ -21,7 +21,7 @@ namespace TKJP.Player
         public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
         {
             base.GrabBegin(hand, grabPoint);
-            weaponManager.DeleteExcept(this.gameObject, TKJPGrabber.GrabType.Attack);
+            //weaponManager.DeleteExcept(this.gameObject, TKJPGrabber.GrabType.Attack);
         }
     }
 }

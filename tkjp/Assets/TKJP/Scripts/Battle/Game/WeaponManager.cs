@@ -21,6 +21,8 @@ namespace TKJP.Battle.Game {
         }
         private Dictionary<GameObject, WeaponInfo> weaponInfos = new Dictionary<GameObject, WeaponInfo>();
 
+        private TKJPGrabber right, left;
+
         public void SetWeaponInfo(GameObject[] weapons)
         {
             //Todo: random化
@@ -39,14 +41,26 @@ namespace TKJP.Battle.Game {
             return weaponInfos[weapon].transform;
         }
 
-        public void DeleteExcept(GameObject selectedWeapon, TKJPGrabber.GrabType selectedType)
+        public void ForceRelease()
         {
-            weaponInfos
-                .Where(w => !w.Key.Equals(selectedWeapon))
-                .Where(w => w.Value.type == selectedType)
-                .ToList()
-                .ForEach(w => w.Value.deletable.Delete());
+            right.Release();
+            left.Release();
         }
+
+        public void SetHand(TKJPGrabber right, TKJPGrabber left)
+        {
+            this.right = right;
+            this.left = left;
+        }
+
+        //public void DeleteExcept(GameObject selectedWeapon, TKJPGrabber.GrabType selectedType)
+        //{
+        //    weaponInfos
+        //        .Where(w => !w.Key.Equals(selectedWeapon))
+        //        .Where(w => w.Value.type == selectedType)
+        //        .ToList()
+        //        .ForEach(w => w.Value.deletable.Delete());
+        //}
     }
 
     public struct Trs

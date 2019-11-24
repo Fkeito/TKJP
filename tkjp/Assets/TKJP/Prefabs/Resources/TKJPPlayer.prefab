@@ -816,6 +816,8 @@ MonoBehaviour:
   left: {fileID: 513998600890574957}
   EnemyPrefab: {fileID: 1070022276755139836, guid: 51045ec46ae6e4b738490cc6fd2bcb04,
     type: 3}
+  leftHand: {fileID: 5515642751199195912}
+  rightHand: {fileID: 5515642750222172853}
 --- !u!114 &1993650725582593129
 MonoBehaviour:
   m_ObjectHideFlags: 0
