@@ -45,7 +45,7 @@ namespace TKJP.Battle.Game
             {
                 h.SetActive(false);
             }
-            yourHand[i].SetActive(true);
+            enemysHand[i].SetActive(true);
         }
 
     }
