@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2910,7 +2910,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugEnemy: {fileID: 0}
-  weapons: []
+  weapons:
+  - {fileID: 96937429572510972, guid: 9d9d2b8b47cec48b3a47320f6cb1c460, type: 3}
+  - {fileID: 5788200465702404994, guid: c601349c4ec9042bfb6b84c5e78029c6, type: 3}
+  - {fileID: 3857019086930095180, guid: 4826459bbe72d4a5db571dcc4e66a8bc, type: 3}
+  - {fileID: 8966498348518619676, guid: fa0d03691df4e4a9f899dd0f751e21cc, type: 3}
   bar: {fileID: 1165557004}
 --- !u!114 &1741071424
 MonoBehaviour:

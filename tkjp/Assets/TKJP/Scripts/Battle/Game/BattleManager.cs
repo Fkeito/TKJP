@@ -39,9 +39,17 @@ namespace TKJP.Battle.Game
             time = 0f;
 
             result = Manager.GetState<ResultManager>();
-
+            var ids = new int[weapons.Length];
+            var weps = new GameObject[weapons.Length];
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                var obj = Instantiate(weapons[i]);
+                ids[i] = obj.GetComponent<PhotonView>().ViewID;
+                weps[i] = obj;
+            }
+            _photonview.RPC("SetEnemyHp", RpcTarget.Others, ids);
             weaponManager = WeaponManager.Singleton;
-            weaponManager.SetWeaponInfo(weapons);
+            weaponManager.SetWeaponInfo(weps);
 
             //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
@@ -124,7 +132,14 @@ namespace TKJP.Battle.Game
                 weapon.transform.rotation = resetTrs.rotation;
             }
         }
-
+        [PunRPC]
+        private void SetWeaponId(int[] ids)
+        {
+            for (int i = 0; i < weapons.Length; i++)
+            {
+                weapons[i].GetComponent<PhotonView>().ViewID = ids[i];
+            }
+        }
         public void SetGrabType(int jankenResult)
         {
             switch (jankenResult)
