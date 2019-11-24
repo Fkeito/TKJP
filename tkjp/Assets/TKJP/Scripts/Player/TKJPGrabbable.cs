@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using Photon.Pun;
 namespace TKJP.Player
 {
     public class TKJPGrabbable : OVRGrabbable, IDelatable
@@ -38,7 +38,11 @@ namespace TKJP.Player
                 RemoveComponent(Components[i]);
             }
         }
-
+        public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+        {
+            base.GrabBegin(hand, grabPoint);
+            GetComponent<PhotonView>()?.RequestOwnership();
+        }
         void OnEnabled()
         {
             m_allowOffhandGrab = true;
