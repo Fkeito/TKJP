@@ -41,7 +41,7 @@ namespace TKJP.Battle.Game
             result = Manager.GetState<ResultManager>();
             var ids = new int[weapons.Length];
             var weps = new GameObject[weapons.Length];
-            for (int i = 0; i <= weapons.Length; i++)
+            for (int i = 0; i < weapons.Length; i++)
             {
                 var obj = Instantiate(weapons[i]);
                 ids[i] = obj.GetComponent<PhotonView>().ViewID;
