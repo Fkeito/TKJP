@@ -14,7 +14,7 @@ namespace TKJP.Battle.Game
         private bool masterIsReady;
         private bool clientIsReady;
         private PhotonView _photonView;
-
+        [SerializeField]
         public void Initialize()
         {
             masterIsReady = clientIsReady = false;
@@ -36,6 +36,8 @@ namespace TKJP.Battle.Game
             else
             {
                 TKJPPlayer = Instantiate(playerPrefab, Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
+                var stateUIRoot = GameObject.Find("States");
+                stateUIRoot.transform.eulerAngles = stateUIRoot.transform.eulerAngles + Vector3.up * 180;
             }
             TKJPPlayer.GetComponent<TKJPPlayer>().ViewSyncro();
         }
@@ -66,6 +68,7 @@ namespace TKJP.Battle.Game
 
         public void GetReady()
         {
+            Debug.Log("ready");
             if (PhotonNetwork.IsMasterClient)
             {
                 StartCoroutine(DelayMethod(1f, () =>
