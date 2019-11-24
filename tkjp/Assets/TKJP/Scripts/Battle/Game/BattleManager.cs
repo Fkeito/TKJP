@@ -119,6 +119,10 @@ namespace TKJP.Battle.Game
                     _photonview.RPC("SetEnemyHp", RpcTarget.Others, value);
                     if (value <= 0) BeSettled(Result.Lose);
                 });
+            foreach(GameObject weapon in weapons)
+            {
+                weapon.SetActive(true);
+            }
         }
 
         void OnDisable()
@@ -130,6 +134,7 @@ namespace TKJP.Battle.Game
                 weapon.SetActive(true);
                 WeaponManager.Singleton.ForceRelease();
                 weapon.transform.parent = this.transform;
+                weapon.SetActive(false);
                 Trs resetTrs = weaponManager?.GetFirstTrs(weapon) ?? new Trs(weapon.transform);
                 weapon.transform.position = resetTrs.position;
                 weapon.transform.rotation = resetTrs.rotation;
