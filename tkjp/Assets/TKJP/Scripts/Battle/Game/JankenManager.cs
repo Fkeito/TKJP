@@ -98,7 +98,6 @@ namespace TKJP.Battle.Game
         [PunRPC]
         public void ClientNextTo()
         {
-            Manager.GetState<BattleManager>().rivalHand = clientHand;
             NextTo();
         } 
 
@@ -143,6 +142,7 @@ namespace TKJP.Battle.Game
         }
         private IEnumerator _Jadge()
         {
+            jankenhand.SetEnemyHand((int)clientHand + 1);
             int result = (masterHand - clientHand + 3) % 3;
             //Todo: 演出
             yield return new WaitForSeconds(2f);
