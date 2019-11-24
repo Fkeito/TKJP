@@ -60,7 +60,11 @@ namespace TKJP.Player
         [PunRPC]
         private void CreatreMeAsEnemy(int headid, int rightid, int leftid)
         {
-            enemy = Instantiate(EnemyPrefab).GetComponent<TKJPEnemy>();
+            var pos = transform.position;
+            pos.z *= -1;
+            var rot = transform.eulerAngles;
+            rot.y += 180;
+            enemy = Instantiate(EnemyPrefab,pos,Quaternion.Euler(rot)).GetComponent<TKJPEnemy>();
             enemy.Constructor(headid, rightid, leftid);
         }
         [PunRPC]
