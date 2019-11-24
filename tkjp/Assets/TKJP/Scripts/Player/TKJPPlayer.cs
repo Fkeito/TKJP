@@ -31,10 +31,10 @@ namespace TKJP.Player
             SceneContainer.BindConextObj(this);
 
             view = GetComponent<PhotonView>();
-            PhotonNetwork.AllocateViewID(view);
-            PhotonNetwork.AllocateViewID(head);
-            PhotonNetwork.AllocateViewID(right);
-            PhotonNetwork.AllocateViewID(left);
+            //PhotonNetwork.AllocateViewID(view);
+            //PhotonNetwork.AllocateViewID(head);
+            //PhotonNetwork.AllocateViewID(right);
+            //PhotonNetwork.AllocateViewID(left);
 
             GetHp()
                 .OnChangeHp

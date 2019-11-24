@@ -24,18 +24,14 @@ namespace TKJP.Battle.Game
                 _photonView = gameObject.AddComponent<PhotonView>();
             }
         }
-        public GameObject playerPrefab;
-        private GameObject TKJPPlayer;
+        //public GameObject playerPrefab;
+        public GameObject TKJPPlayer;
         public void OnChanged()
         {
             Initialize();
-            if (PhotonNetwork.IsMasterClient)
+            if (!PhotonNetwork.IsMasterClient)
             {
-                TKJPPlayer = Instantiate(playerPrefab, Vector3.back * 1.65f, Quaternion.identity);
-            }
-            else
-            {
-                TKJPPlayer = Instantiate(playerPrefab, Vector3.forward * 1.65f, Quaternion.Euler(Vector3.up * 180f));
+                this.TKJPPlayer.transform.SetPositionAndRotation(Vector3.forward * 1.65f, Quaternion.Euler(Vector3.up * 180f));
                 var stateUIRoot = GameObject.Find("States");
                 stateUIRoot.transform.eulerAngles = stateUIRoot.transform.eulerAngles + Vector3.up * 180;
             }
