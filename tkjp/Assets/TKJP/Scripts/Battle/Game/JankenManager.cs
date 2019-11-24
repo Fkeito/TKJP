@@ -132,6 +132,7 @@ namespace TKJP.Battle.Game
 
             Debug.Log(" hand is " + i);
         }
+        [PunRPC]
         public void SetMasterJankenHand(int i)
         {
             clientHand = (JankenHand)i;
