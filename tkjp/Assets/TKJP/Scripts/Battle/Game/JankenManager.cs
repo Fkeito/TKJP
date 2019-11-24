@@ -12,6 +12,8 @@ namespace TKJP.Battle.Game
     {
         private BattleManager battle;
 
+        public Battle.Game.JankenHand jankenhand;
+
         private JankenHand masterHand = JankenHand.None;
         private JankenHand clientHand = JankenHand.None;
 
@@ -101,6 +103,7 @@ namespace TKJP.Battle.Game
 
         public void SetJankenHand(int i)
         {
+            jankenhand.SetMyHand(i+1);
             if (PhotonNetwork.IsMasterClient)
             {
                 masterHand = (JankenHand)i;
@@ -123,6 +126,8 @@ namespace TKJP.Battle.Game
         public void SetClientJankenHand(int i)
         {
             clientHand = (JankenHand)i;
+            jankenhand.SetEnemyHand(i+1);
+
             Debug.Log(" hand is " + i);
         }
         public void Jadge()
