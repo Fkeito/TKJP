@@ -98,6 +98,7 @@ namespace TKJP.Battle.Game
         [PunRPC]
         public void ClientNextTo()
         {
+            Manager.GetState<BattleManager>().rivalHand = clientHand;
             NextTo();
         } 
 
@@ -107,7 +108,10 @@ namespace TKJP.Battle.Game
             if (PhotonNetwork.IsMasterClient)
             {
                 masterHand = (JankenHand)i;
+                _photonview.RPC("SetMasterJankenHand", RpcTarget.MasterClient, i);
                 Debug.Log("master hand is " + i);
+
+
                 if (Common.Settings.device == Common.Settings.Device.Editor)
                 {
                     if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
@@ -126,9 +130,12 @@ namespace TKJP.Battle.Game
         public void SetClientJankenHand(int i)
         {
             clientHand = (JankenHand)i;
-            jankenhand.SetEnemyHand(i+1);
 
             Debug.Log(" hand is " + i);
+        }
+        public void SetMasterJankenHand(int i)
+        {
+            clientHand = (JankenHand)i;
         }
         public void Jadge()
         {
