@@ -38,18 +38,20 @@ namespace TKJP.Battle.Game
             battleTime = 5f;
             time = 0f;
 
-            //result = Manager.GetState<ResultManager>();
-            //var ids = new int[weapons.Length];
-            //var weps = new GameObject[weapons.Length];
-            //for (int i = 0; i < weapons.Length; i++)
-            //{
-            //    var obj = Instantiate(weapons[i]);
-            //    ids[i] = obj.GetComponent<PhotonView>().ViewID;
-            //    weps[i] = obj;
-            //}
-            //_photonview.RPC("SetEnemyHp", RpcTarget.Others, ids);
-            //weaponManager = WeaponManager.Singleton;
-            //weaponManager.SetWeaponInfo(weps);
+            _photonview = GetComponent<PhotonView>();
+            result = Manager.GetState<ResultManager>();
+            if (PhotonNetwork.IsMasterClient)
+            {
+                var ids = new int[weapons.Length];
+                for (int i = 0; i < weapons.Length; i++)
+                {
+                    ids[i] = weapons[i].GetComponent<PhotonView>().ViewID;
+                }
+                _photonview.RPC("SetWeaponId", RpcTarget.Others, ids);
+            }
+            
+            weaponManager = WeaponManager.Singleton;
+            weaponManager.SetWeaponInfo(weapons);
 
             //clientPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Win); }).AddTo(gameObject);
             //masterPlayer.GetHp().OnChangeHp.Subscribe(value => { if (value <= 0) BeSettled(Result.Lose); }).AddTo(gameObject);
@@ -59,7 +61,6 @@ namespace TKJP.Battle.Game
             }
 
             
-            _photonview = GetComponent<PhotonView>();
             if(_photonview == null)
             {
                 _photonview = gameObject.AddComponent<PhotonView>();

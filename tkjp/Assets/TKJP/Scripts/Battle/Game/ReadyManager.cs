@@ -31,11 +31,11 @@ namespace TKJP.Battle.Game
             Initialize();
             if (PhotonNetwork.IsMasterClient)
             {
-                TKJPPlayer = Instantiate(playerPrefab, Vector3.back * 1.5f, Quaternion.identity);
+                TKJPPlayer = Instantiate(playerPrefab, Vector3.back * 1.65f, Quaternion.identity);
             }
             else
             {
-                TKJPPlayer = Instantiate(playerPrefab, Vector3.forward * 1.5f, Quaternion.Euler(Vector3.up * 180f));
+                TKJPPlayer = Instantiate(playerPrefab, Vector3.forward * 1.65f, Quaternion.Euler(Vector3.up * 180f));
                 var stateUIRoot = GameObject.Find("States");
                 stateUIRoot.transform.eulerAngles = stateUIRoot.transform.eulerAngles + Vector3.up * 180;
             }

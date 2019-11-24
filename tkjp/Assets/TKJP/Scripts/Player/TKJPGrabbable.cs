@@ -46,10 +46,12 @@ namespace TKJP.Player
 
         public void Delete()
         {
-            StartCoroutine(SetDeleteEffect());
+            //StartCoroutine(SetDeleteEffect());
         }
         private IEnumerator SetDeleteEffect()
         {
+            yield return null;
+            /*
             m_allowOffhandGrab = false;
             float deleteTime = 0.5f;
             float time = 0;
@@ -68,6 +70,7 @@ namespace TKJP.Player
             color.a = 1;
             mesh.material.color = color;
             deleteEffect.SetActive(true);
+            */
         }
     }
 }
