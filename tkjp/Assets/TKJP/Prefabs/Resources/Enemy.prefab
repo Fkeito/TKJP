@@ -457,6 +457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4435562329544455258, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2893040541989211460, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -606,11 +611,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4435562329544455258, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a7c1c0f0fbd40fcbf3dc60aaf69398, type: 3}

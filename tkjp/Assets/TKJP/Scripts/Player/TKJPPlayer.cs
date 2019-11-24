@@ -60,6 +60,7 @@ namespace TKJP.Player
         [PunRPC]
         private void CreatreMeAsEnemy(int headid, int rightid, int leftid)
         {
+            Debug.Log("aa");
             var pos = transform.position;
             pos.z *= -1;
             var rot = transform.eulerAngles;
