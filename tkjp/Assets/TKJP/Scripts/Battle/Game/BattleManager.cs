@@ -27,9 +27,6 @@ namespace TKJP.Battle.Game
         private float battleTime;
         private float time;
 
-        public JankenHand jankenhand;
-        public JankenManager.JankenHand rivalHand;
-
         private PhotonView _photonview;
         private IDisposable HpDisposable;
         public void Initialize()
@@ -78,7 +75,6 @@ namespace TKJP.Battle.Game
         public void OnChanged()
         {
             time = 0f;
-            jankenhand.SetMyHand((int)rivalHand + 1);
         }
 
         public void OnUpdate()
