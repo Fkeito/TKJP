@@ -56,7 +56,7 @@ namespace TKJP.Common
 #if UNITY_EDITOR
                     Settings.device = Settings.Device.Editor;
 #else
-                    Settings.device = Settings.Device.Else;
+                    Settings.device = Settings.Device.Editor;
 #endif
                     break;
             }
