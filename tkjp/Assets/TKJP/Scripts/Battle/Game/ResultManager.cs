@@ -19,7 +19,7 @@ namespace TKJP.Battle.Game
 
         public void Initialize()
         {
-
+            // No Implement
         }
 
         public void OnChanged()
@@ -52,7 +52,7 @@ namespace TKJP.Battle.Game
 
         public void NextTo()
         {
-
+            // No Implement
         }
 
         public void SetResult(Result result)

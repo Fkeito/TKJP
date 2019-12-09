@@ -22,7 +22,7 @@ namespace TKJP.Player
         public TKJPGrabber leftHand;
         public TKJPGrabber rightHand;
 
-        TKJPEnemy enemy;
+        public TKJPEnemy enemy;
 
         private void Awake()
         {
@@ -61,11 +61,11 @@ namespace TKJP.Player
         private void CreatreMeAsEnemy(int headid, int rightid, int leftid)
         {
             Debug.Log("aa");
-            var pos = transform.position;
-            pos.z *= -1;
-            var rot = transform.eulerAngles;
-            rot.y += 180;
-            enemy = Instantiate(EnemyPrefab,pos,Quaternion.Euler(rot)).GetComponent<TKJPEnemy>();
+            //var pos = transform.position;
+            //pos.z *= -1;
+            //var rot = transform.eulerAngles;
+            //rot.y += 180;
+            //enemy = Instantiate(EnemyPrefab,pos,Quaternion.Euler(rot)).GetComponent<TKJPEnemy>();
             enemy.Constructor(headid, rightid, leftid);
         }
         [PunRPC]

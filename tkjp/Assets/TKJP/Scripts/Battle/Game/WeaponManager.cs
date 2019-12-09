@@ -27,13 +27,14 @@ namespace TKJP.Battle.Game {
         {
             //Todo: random化
             weaponInfos = weapons.ToDictionary(
-                                    w => w , 
-                                    w => new WeaponInfo(
-                                        w.transform.position,
-                                        w.transform.rotation,
-                                        w.GetComponent<AttackGrabbable>() ? TKJPGrabber.GrabType.Attack : w.GetComponent<DefenceGrabbable>() ? TKJPGrabber.GrabType.Defence : TKJPGrabber.GrabType.None,
-                                        w.GetComponent<IDelatable>()
-            ));
+                w => w ,
+                w => new WeaponInfo(
+                    w.transform.position,
+                    w.transform.rotation,
+                    w.GetComponent<AttackGrabbable>() ? TKJPGrabber.GrabType.Attack : w.GetComponent<DefenceGrabbable>() ? TKJPGrabber.GrabType.Defence : TKJPGrabber.GrabType.None,
+                    w.GetComponent<IDelatable>()
+                )
+            );
         }
 
         public Trs GetFirstTrs(GameObject weapon)
@@ -52,15 +53,6 @@ namespace TKJP.Battle.Game {
             this.right = right;
             this.left = left;
         }
-
-        //public void DeleteExcept(GameObject selectedWeapon, TKJPGrabber.GrabType selectedType)
-        //{
-        //    weaponInfos
-        //        .Where(w => !w.Key.Equals(selectedWeapon))
-        //        .Where(w => w.Value.type == selectedType)
-        //        .ToList()
-        //        .ForEach(w => w.Value.deletable.Delete());
-        //}
     }
 
     public struct Trs

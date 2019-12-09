@@ -44,5 +44,8 @@ MonoBehaviour:
   - CreatreMeAsEnemy
   - OnChangePlayerHp
   - SetWeaponId
+  - SetMasterJankenHand
+  - SetView
+  - SetEnemyTrs
   DisableAutoOpenWizard: 1
   ShowSettings: 1
